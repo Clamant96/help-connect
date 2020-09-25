@@ -425,6 +425,322 @@ html, body{
 
 }
 
+/*LOCALIDADE*/
+
+#container #containerLocalildade{
+    width: 100%;
+    height: auto;
+
+    /*background-color: #212353;*/
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#container #containerLocalildade h1{
+    padding: 2%;
+
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--text-bold);
+
+}
+
+#container #containerLocalildade #conteudoLocalidade{
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /*background-color: #262626;*/
+
+}
+
+#container #containerLocalildade #conteudoLocalidade frame{
+    width: 100%;
+    height: auto;
+
+}
+
+/*FORMULARIO*/
+
+#container #containerFormulario{
+    padding: 1%;
+    width: 98%;
+    height: auto;
+
+    background-color: var(--backgroundColor-gray);
+
+}
+
+#container #containerFormulario #conteudoFormulario{
+    width: 100%;
+    height: auto;
+
+    /*background-color: #4B5D68;*/
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container #containerFormulario #conteudoFormulario #formulario{
+    width: 80%;
+    height: auto;
+
+    /*background-color: #9C69E2;*/ 
+
+}
+
+/*EMAIL*/
+
+#container #containerFormulario #conteudoFormulario #formulario #email{
+    padding: 1%;
+    width: 98%;
+    height: auto;
+
+    /*background-color: #F063B8;*/
+
+}
+
+#container #containerFormulario #conteudoFormulario #formulario #email p{
+    padding: 1%;
+    width: 98%;
+    height: auto;
+
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-bold);
+
+}
+
+#container #containerFormulario #conteudoFormulario #formulario #email #enviar{
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+
+}
+
+#container #containerFormulario #conteudoFormulario #formulario #email #enviar input{
+    padding: 1%;
+    margin: 1%;
+    width: 96%;
+    height: auto;
+
+    border: none;
+
+    box-shadow: 0px 3px 5px -5px var(--boxShadow);
+
+}
+
+#container #containerFormulario #conteudoFormulario #formulario #email #enviar button{
+    padding: 1%;
+    margin: 1%;
+    width: 46%;
+    height: auto;
+
+    border: none;
+
+    color: var(--text-bold);
+
+    box-shadow: 0px 3px 5px -5px var(--boxShadow);
+
+    background-color: var(--backgroundColor-gray2);
+
+    transition: box-shadow, background-color, color, .5s;
+
+}
+
+#container #containerFormulario #conteudoFormulario #formulario #email #enviar button:hover{
+    color: var(--text-white);
+
+    box-shadow: 0px 0px 0px 0px var(--boxShadow);
+
+    background-color: var(--buttom-purple);
+
+}
+
+/*TEXTO*/
+
+#container #containerFormulario #conteudoFormulario #formulario #texto{
+    padding: 1%;
+    width: 98%;
+    height: auto;
+
+    /*background-color: #F063B8;*/
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center; 
+
+}
+
+#container #containerFormulario #conteudoFormulario #formulario #texto p{
+    padding: 1%;
+    width: 98%;
+    height: auto;
+
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-bold);
+
+}
+
+#container #containerFormulario #conteudoFormulario #formulario #texto #textArea{
+    padding: 1%;
+    width: 98%;
+    height: auto;
+
+    border: none;
+
+    box-shadow: 0px 3px 5px -5px var(--boxShadow);
+
+}
+
+/*FOOTER*/
+
+#container #containerFooter{
+    padding: 2%;
+    width: 96%;
+    height: auto;
+
+    background-color: var(--backgroundColor-gray);
+
+}
+
+#container #containerFooter #conteudoFooter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+
+}
+
+/*LOGO*/
+
+#container #containerFooter #conteudoFooter #conteudoLogo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 15%;
+    height: auto;
+
+}
+
+#container #containerFooter #conteudoFooter #conteudoLogo img{
+    padding: 1%;
+    width: 98%;
+    height: auto;
+
+}
+
+#container #containerFooter #conteudoFooter #conteudoLogo p{
+    padding: 1%;
+    width: 98%;
+    height: auto;
+
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-sample);
+
+    text-align: center;
+
+    text-transform: uppercase;
+
+}
+
+/*MENU*/
+
+#container #containerFooter #conteudoFooter #dadosFooter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1%;
+    width: 38%;
+    height: auto;
+
+}
+
+#container #containerFooter #conteudoFooter #dadosFooter #conteudoMenu{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+
+}
+
+#container #containerFooter #conteudoFooter #dadosFooter #conteudoMenu ul{
+    list-style: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-sample);
+
+    width: 100%;
+    height: auto;
+
+    text-align: right;
+
+    text-transform: uppercase;
+
+}
+
+#container #containerFooter #conteudoFooter #dadosFooter #conteudoMenu ul li{
+    padding: 2%;
+    width: 96%;
+    height: auto;
+
+}
+
+/*CONTATOS*/
+
+#container #containerFooter #conteudoFooter #dadosFooter #conteudoContatos{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: right;
+
+    width: 100%;
+    height: auto;
+
+}
+
+#container #containerFooter #conteudoFooter #dadosFooter #conteudoContatos ul{
+    list-style: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-sample);
+
+    width: 100%;
+    height: auto;
+
+    text-align: right;
+
+}
+
+#container #containerFooter #conteudoFooter #dadosFooter #conteudoContatos ul li{
+    padding: 2%;
+    width: 96%;
+    height: auto;
+
+}
 
 /*CONFIGURANDO RESPONSIVIDADE*/
 
@@ -704,6 +1020,142 @@ html, body{
 
     }
 
+    /*FOOTER*/
+
+    #container #containerFooter{
+        padding: 2%;
+        width: 96%;
+        height: auto;
+
+        background-color: var(--backgroundColor-gray);
+
+    }
+
+    #container #containerFooter #conteudoFooter{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: auto;
+
+    }
+
+    /*LOGO*/
+
+    #container #containerFooter #conteudoFooter #conteudoLogo{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        padding: 2%;
+        width: 56%;
+        height: auto;
+
+    }
+
+    #container #containerFooter #conteudoFooter #conteudoLogo img{
+        padding: 1%;
+        width: 78%;
+        height: auto;
+
+    }
+
+    #container #containerFooter #conteudoFooter #conteudoLogo p{
+        padding: 1%;
+        width: 98%;
+        height: auto;
+
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--text-sample);
+
+        text-align: center;
+
+        text-transform: uppercase;
+
+    }
+
+    /*MENU*/
+
+    #container #containerFooter #conteudoFooter #dadosFooter{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 2%;
+        width: 96%;
+        height: auto;
+
+    }
+
+    #container #containerFooter #conteudoFooter #dadosFooter #conteudoMenu{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        width: 100%;
+        height: auto;
+
+    }
+
+    #container #containerFooter #conteudoFooter #dadosFooter #conteudoMenu ul{
+        list-style: none;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-sample);
+
+        width: 100%;
+        height: auto;
+
+        text-align: center;
+
+        text-transform: uppercase;
+
+    }
+
+    #container #containerFooter #conteudoFooter #dadosFooter #conteudoMenu ul li{
+        padding: 2%;
+        width: 96%;
+        height: auto;
+
+    }
+
+    /*CONTATOS*/
+
+    #container #containerFooter #conteudoFooter #dadosFooter #conteudoContatos{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        width: 100%;
+        height: auto;
+
+    }
+
+    #container #containerFooter #conteudoFooter #dadosFooter #conteudoContatos ul{
+        list-style: none;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-sample);
+
+        width: 100%;
+        height: auto;
+
+        text-align: left;
+
+    }
+
+    #container #containerFooter #conteudoFooter #dadosFooter #conteudoContatos ul li{
+        padding: 2%;
+        width: 96%;
+        height: auto;
+
+    }
+
 }
 
 @media(min-width: 361px) and (max-width: 767px){
@@ -977,6 +1429,143 @@ html, body{
 
     }
 
+    /*FOOTER*/
+
+    #container #containerFooter{
+        padding: 2%;
+        width: 96%;
+        height: auto;
+
+        background-color: var(--backgroundColor-gray);
+
+    }
+
+    #container #containerFooter #conteudoFooter{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        width: 100%;
+        height: auto;
+
+    }
+
+    /*LOGO*/
+
+    #container #containerFooter #conteudoFooter #conteudoLogo{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        padding: 2%;
+        width: 66%;
+        height: auto;
+
+    }
+
+    #container #containerFooter #conteudoFooter #conteudoLogo img{
+        padding: 1%;
+        width: 98%;
+        height: auto;
+
+    }
+
+    #container #containerFooter #conteudoFooter #conteudoLogo p{
+        padding: 1%;
+        width: 98%;
+        height: auto;
+
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--text-sample);
+
+        text-align: center;
+
+        text-transform: uppercase;
+
+    }
+
+    /*MENU*/
+
+    #container #containerFooter #conteudoFooter #dadosFooter{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 2%;
+        width: 96%;
+        height: auto;
+
+    }
+
+    #container #containerFooter #conteudoFooter #dadosFooter #conteudoMenu{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        width: 100%;
+        height: auto;
+
+    }
+
+    #container #containerFooter #conteudoFooter #dadosFooter #conteudoMenu ul{
+        list-style: none;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-sample);
+
+        width: 100%;
+        height: auto;
+
+        text-align: center;
+
+        text-transform: uppercase;
+
+    }
+
+    #container #containerFooter #conteudoFooter #dadosFooter #conteudoMenu ul li{
+        padding: 2%;
+        width: 96%;
+        height: auto;
+
+    }
+
+    /*CONTATOS*/
+
+    #container #containerFooter #conteudoFooter #dadosFooter #conteudoContatos{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        width: 100%;
+        height: auto;
+
+    }
+
+    #container #containerFooter #conteudoFooter #dadosFooter #conteudoContatos ul{
+        list-style: none;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-sample);
+
+        width: 100%;
+        height: auto;
+
+        text-align: left;
+
+    }
+
+    #container #containerFooter #conteudoFooter #dadosFooter #conteudoContatos ul li{
+        padding: 2%;
+        width: 96%;
+        height: auto;
+
+    }
+
 }
 
 @media(max-width: 360px){
@@ -1247,6 +1836,143 @@ html, body{
         font-size: 12px;
         font-weight: 300;
         color: var(--text-sample);
+
+    }
+
+    /*FOOTER*/
+
+    #container #containerFooter{
+        padding: 2%;
+        width: 96%;
+        height: auto;
+
+        background-color: var(--backgroundColor-gray);
+
+    }
+
+    #container #containerFooter #conteudoFooter{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        width: 100%;
+        height: auto;
+
+    }
+
+    /*LOGO*/
+
+    #container #containerFooter #conteudoFooter #conteudoLogo{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        padding: 2%;
+        width: 66%;
+        height: auto;
+
+    }
+
+    #container #containerFooter #conteudoFooter #conteudoLogo img{
+        padding: 1%;
+        width: 98%;
+        height: auto;
+
+    }
+
+    #container #containerFooter #conteudoFooter #conteudoLogo p{
+        padding: 1%;
+        width: 98%;
+        height: auto;
+
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--text-sample);
+
+        text-align: center;
+
+        text-transform: uppercase;
+
+    }
+
+    /*MENU*/
+
+    #container #containerFooter #conteudoFooter #dadosFooter{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 2%;
+        width: 96%;
+        height: auto;
+
+    }
+
+    #container #containerFooter #conteudoFooter #dadosFooter #conteudoMenu{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        width: 100%;
+        height: auto;
+
+    }
+
+    #container #containerFooter #conteudoFooter #dadosFooter #conteudoMenu ul{
+        list-style: none;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-sample);
+
+        width: 100%;
+        height: auto;
+
+        text-align: left;
+
+        text-transform: uppercase;
+
+    }
+
+    #container #containerFooter #conteudoFooter #dadosFooter #conteudoMenu ul li{
+        padding: 2%;
+        width: 96%;
+        height: auto;
+
+    }
+
+    /*CONTATOS*/
+
+    #container #containerFooter #conteudoFooter #dadosFooter #conteudoContatos{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        width: 100%;
+        height: auto;
+
+    }
+
+    #container #containerFooter #conteudoFooter #dadosFooter #conteudoContatos ul{
+        list-style: none;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-sample);
+
+        width: 100%;
+        height: auto;
+
+        text-align: left;
+
+    }
+
+    #container #containerFooter #conteudoFooter #dadosFooter #conteudoContatos ul li{
+        padding: 2%;
+        width: 96%;
+        height: auto;
 
     }
 
