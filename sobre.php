@@ -336,10 +336,10 @@
     <header id="menu">
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="index.html">Layouts</a></li>
+                <li><a href="index.php">Inicio</a></li>
+                <li><a href="index.php">Layouts</a></li>
                 <li id="active">Sobre</li>
-                <li><a href="index.html">Contatos</a></li>
+                <li><a href="index.php">Contatos</a></li>
 
             </ul>
 
@@ -361,8 +361,11 @@
                 </svg>
 
                 <div id="login">
-                    <img src="img/profile-user.svg">
-                    <!--Increva-se / <b>Login</b>-->
+                    <a href="services/login.php">
+                        <img src="img/profile-user.svg">
+                        <!--Increva-se / <b>Login</b>-->
+
+                    </a>
                 
                 </div>
 
