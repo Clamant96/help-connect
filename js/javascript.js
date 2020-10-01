@@ -1,3 +1,10 @@
+document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+document.body.scrollTop = 0; // For Safari
+
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
+
 const menu1 = document.getElementById("imagem1");
 const menu2 = document.getElementById("imagem2");
 const menu3 = document.getElementById("imagem3");

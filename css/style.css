@@ -11,14 +11,13 @@
 }
 
 html, body{
-    height: 100%;
 
     font-family: 'Montserrat', sans-serif;
 
-    background-image: url(../img/backgroundCompleto.png);
+    /*background-image: url(../img/backgroundCompleto.png);
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center;*/
         
     /*display: flex;
     align-items: center;
@@ -793,26 +792,26 @@ a{
 /*CONFIGURANDO RESPONSIVIDADE*/
 
 @media(min-width: 1024px) and (max-width: 1300px){
-    html, body{
+    /*html, body{
     
         background-image: url(../img/backgroundCompleto.png);
         background-size: 130%;
         background-repeat: no-repeat;
         background-position: center;
     
-    }
+    }*/
 
 }
 
 @media(min-width: 768px) and (max-width: 1023px){
-    html, body{
+    /*html, body{
     
         background-image: url(../img/backgroundCompleto.png);
         background-size: 150%;
         background-repeat: no-repeat;
         background-position: center;
     
-    }
+    }*/
 
     /*MENU*/
 
@@ -1207,14 +1206,14 @@ a{
 }
 
 @media(min-width: 361px) and (max-width: 767px){
-    html, body{
+    /*html, body{
     
         background-image: url(../img/backgroundCompleto.png);
         background-size: 250%;
         background-repeat: no-repeat;
         background-position: center;
     
-    }
+    }*/
 
     /*MENU*/
 
@@ -1617,14 +1616,14 @@ a{
 }
 
 @media(max-width: 360px){
-    html, body{
+    /*html, body{
     
         background-image: url(../img/backgroundCompleto.png);
         background-size: 500%;
         background-repeat: no-repeat;
         background-position: center;
     
-    }
+    }*/
 
     /*MENU*/
 
