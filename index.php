@@ -19,20 +19,22 @@ if(isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])):
     </script>
     
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleIconPerfil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
     <!-- SideBar -->
     <header id="menu">
         <nav>
-            <div id="perfil">
+            <!--<div id="perfil">
                 <label id="nomeUsuario"><?php echo $nomeUser; ?></label>
                 <p id="logout">
                     <a href="services/logout.php">Sair</a>
 
                 </p>
                 
-            </div>
+            </div>-->
 
             <ul>
                 <li id="active">Inicio</li>
@@ -62,11 +64,36 @@ if(isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])):
                 <input type="text" placeholder="Pesquisar" />
 
                 <div id="login">
-                    <a href="services/login.php">
+                    <!--<a href="services/login.php">
                         <img src="img/profile-user.svg">
-                        <!--Increva-se / <b>Login</b>-->
 
-                    </a>
+                    </a>-->
+
+                    <div class="dropdown" style="float:right;">
+                        <img src="img/profile-user.svg">
+                        
+                        <div class="dropdown-content">
+                            <div id="dadosUsuario">
+                                <h1><?php echo $nomeUser; ?></h1>
+                                <p><?php echo $emailUser; ?></p>
+                            
+                            </div>
+                            <hr />
+                            <div id="opcoesUsuario">
+                                <a href="services/login.php"><i class="fa fa-power-off"></i></a>
+                                <?php 
+                                    if($situacaolUser == 2){
+                                        echo "<a href=\"services\login.php\">Gerenciar</a>";
+
+                                    }else{
+                                        
+                                    }
+                                
+                                ?>
+                            
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
 
@@ -180,14 +207,14 @@ if(isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])):
 
         <!-- LOCALIDADE -->
 
-        <!--<div id="containerLocalildade">
+        <div id="containerLocalildade">
             <h1>Localidade</h1>
             <section id="conteudoLocalidade">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.5371945121356!2d-46.74736508507254!3d-23.549142567026124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5601cc0edf29%3A0xc2c6dbc78f2aa3db!2sAv.%20Miguel%20Frias%20e%20Vasconcelos%2C%201200%20-%20Jaguar%C3%A9%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005345-000!5e0!3m2!1spt-BR!2sbr!4v1601043539527!5m2!1spt-BR!2sbr" width="1600" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             
             </section>
         
-        </div>-->
+        </div>
 
         <!-- CONTATENOS -->
 

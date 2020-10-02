@@ -11,7 +11,6 @@
 }
 
 html, body{
-
     font-family: 'Montserrat', sans-serif;
 
     /*background-image: url(../img/backgroundCompleto.png);
@@ -375,7 +374,7 @@ a{
 #container #conteudoServicos #textoServicos{
     width: 40%;
     height: auto;
-    /*margin-left: 5%;*/
+    margin-right: 5%;
     margin-top: 3%;
 
     /*background-color: wheat;*/ /*DEBUG*/
@@ -969,7 +968,7 @@ a{
         padding: 1%;
         width: 98%;
         height: auto;
-        /*margin-left: 5%;*/
+        margin-right: 5%;
         margin-top: 0%;
 
         /*background-color: wheat;*/ /*DEBUG*/

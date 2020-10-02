@@ -1,3 +1,9 @@
+<?php 
+
+require 'services/verifica.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,6 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleIconPerfil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
         #container #conteudoServicos{
@@ -361,12 +369,37 @@
                 </svg>
 
                 <div id="login">
-                    <a href="services/login.php">
+                    <!--<a href="services/login.php">
                         <img src="img/profile-user.svg">
-                        <!--Increva-se / <b>Login</b>-->
 
-                    </a>
-                
+                    </a>-->
+
+                    <div class="dropdown" style="float:right;">
+                        <img src="img/profile-user.svg">
+                        
+                        <div class="dropdown-content">
+                            <div id="dadosUsuario">
+                                <h1><?php echo $nomeUser; ?></h1>
+                                <p><?php echo $emailUser; ?></p>
+                            
+                            </div>
+                            <hr />
+                            <div id="opcoesUsuario">
+                                <a href="services/login.php"><i class="fa fa-power-off"></i></a>
+                                <?php 
+                                    if($situacaolUser == 2){
+                                        echo "<a href=\"services\login.php\">Gerenciar</a>";
+
+                                    }else{
+                                        
+                                    }
+                                
+                                ?>
+                            
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
             </header>

@@ -9,7 +9,7 @@
 html, body {
     height: 100%;
 
-    background-color: var(--buttom-purple);
+    /*background-color: var(--buttom-purple);*/
 
     display: flex;
     align-items: center;
