@@ -20,7 +20,7 @@ if(isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])):
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/styleIconPerfil.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
 
 </head>
 <body>
@@ -80,10 +80,10 @@ if(isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])):
                             </div>
                             <hr />
                             <div id="opcoesUsuario">
-                                <a href="services/login.php"><i class="fa fa-power-off"></i></a>
+                                <a href="services/login.php">Sair<!--<i class="fa fa-power-off"></i>--></a>
                                 <?php 
                                     if($situacaolUser == 2){
-                                        echo "<a href=\"services\login.php\">Gerenciar</a>";
+                                        echo "<a href=\"services\listandoItens.php\">Gerenciar</a>";
 
                                     }else{
                                         

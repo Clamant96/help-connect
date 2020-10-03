@@ -101,7 +101,7 @@
   
 }
 
-.fa{
+/*.fa{
   color: #262626;
   
   transition: color, .5s;
@@ -113,7 +113,7 @@
 .fa:hover{
   color: red;
     
-}
+}*/
 
 hr{
   border-top: 1px solid var(--backgroundColor-gray);

@@ -4,7 +4,7 @@ session_start();
 
 $localhost = "fdb22.awardspace.net";
 $user = "3486769_cadastro";
-$pass = "";
+$pass = "Edkaike1";
 $bancoDeDados = "3486769_cadastro";
 
 /*$localhost = "localhost";
