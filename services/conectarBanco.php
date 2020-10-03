@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli("fdb22.awardspace.net","3486769_cadastro","Edkaike1","3486769_cadastro");
+$mysqli = new mysqli("fdb22.awardspace.net","3486769_cadastro","","3486769_cadastro");
 //$mysqli = new mysqli("localhost","root","","cadastro");
 
 if ($mysqli -> connect_errno) {
