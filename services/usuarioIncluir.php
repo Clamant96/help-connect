@@ -73,7 +73,7 @@
 
     </div>
 
-    <form id="form" action="usuarioIncluirOK.php" method="POST">
+    <form id="form" action="usuarioIncluirOk.php" method="POST">
         <div id="container">
             <div style="display:none;"> <!-- DEIXA O ID INVISIVEL PARA O USUARIO -->
                 <p>ID</p>

@@ -95,7 +95,7 @@
 
     </div>
 
-    <form id="form" action="usuarioAlterarOK.php" method="POST">
+    <form id="form" action="usuarioAlterarOk.php" method="POST">
         <div id="container">
             <div style="display:none;"> <!-- DEIXA O ID INVISIVEL PARA O USUARIO -->
                 <p>ID</p>

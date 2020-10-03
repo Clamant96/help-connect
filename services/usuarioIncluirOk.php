@@ -14,5 +14,4 @@ $mysqli->query($sql);
 // echo "New record has id: " . $mysqli -> insert_id;
 $mysqli->close();
 
-header('Location: ../index.php');
-//header('Location: listandoItens.php');
+header("Location: listandoItens.php");
