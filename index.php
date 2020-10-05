@@ -20,6 +20,7 @@ if(isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])):
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/styleIconPerfil.css">
+    <link rel="stylesheet" href="css/styleListandoProdutos.css">
     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
 
 </head>
@@ -116,6 +117,60 @@ if(isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])):
         </section>
 
         <section id="conteudoLayouts">
+            <div id="cadastrosPessoas">
+                <div id="listar">
+                    <?php 
+                    require_once 'services/conectarBanco.php';
+                    $sql = "SELECT * FROM produto";
+                    if ($result = $mysqli->query($sql)) {
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<div id=\"cardPerfis\">
+                                <div id=\"perfil\"> 
+
+                                <div id=\"img\">
+                                    <img src=\"img/layout_teste.jpg\">
+                                
+                                </div>
+
+                                <div id=\"dadosUsuario\"> 
+                                    <div id=\"nome\">"
+                                    . $row["nome"] .
+                                    
+                                    "</div>
+                                </div>
+
+                                <div id=\"dadosUsuario\"> 
+                                    <div id=\"descricao\">"
+                                    . $row["descricao"] .
+                                
+                                    "</div>
+                                </div> 
+
+                                <div id=\"dadosUsuario\">  
+                                    <div id=\"preco\">R$ "
+                                    . $row["preco"] .
+                                
+                                    "</div>
+                                </div>
+
+                                </div>
+
+                            </div>
+                            ";
+                        }
+
+                        $result->free_result();
+                    }
+                    $mysqli->close();
+                    ?>
+                    
+                </div>
+
+            </div>
+
+            
+            
+            <!--
             <div id="blocoslayouts">
                 <div id="imgLayouts">
                     <img src="img/layout_teste.jpg" >
@@ -202,8 +257,12 @@ if(isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])):
                 </div>
 
             </div>
+        
+        -->
 
         </section>
+
+        
 
         <!-- LOCALIDADE -->
 

@@ -276,18 +276,16 @@ html, body {
         align-items: center;
         justify-content: center;
     
-        /*background-color: #2ab850;*/
+        background-color: #2ab850;
+    
+        width: 100%;
+        height: auto;
     
     }
     
     #listar {
-        width: 70vw;
+        width: 100% !important;
         height: auto;
-
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
     
         /*background-color: var(--backgroundColor-gray2);*/
     
@@ -296,22 +294,193 @@ html, body {
     #cardPerfis {
         display: inline-flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
     
-        padding: 2%;
-        margin: 2%;
-        width: 100%; /*CONTROLADOR DE DIMENSAO DE PERFIS*/
+        margin: 1%;
+        width: 31%; /*CONTROLADOR DE DIMENSAO DE PERFIS*/
+        height: auto;
+    
+    }
+    
+    /*OPCOES BOTOES*/
+    
+    #listar #cardPerfis #opcoes {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    
+        /*background-color:#9C69E2;*/
+    
+        width: 15%;
+        height: auto;
+    
+        
+    
+    }
+    
+    #listar #cardPerfis #opcoes a { /*AJUSTE DE BOTOES*/
+        list-style: none;
+    
+        padding: 1%;
+        width: 98%;
+        height: 5vh;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        color: var(--text-sample);
+        font-size: 20px;
+    
+    }
+    
+    #listar #cardPerfis #opcoes a svg{
+        transition: color, .5s;
+    
+    }
+    
+    #listar #cardPerfis #opcoes a #edit:hover {
+        color: var(--text-green);
+    
+    }
+    
+    #listar #cardPerfis #opcoes a #remove:hover {
+        color: var(--text-red);
+    
+    }
+    
+    #listar #cardPerfis #opcoes a #add:hover {
+        color: var(--text-yellow);
+    
+    }
+    
+    /*DECORACAO LOGO*/
+    
+    #listar #cardPerfis #imagem {
+        width: 15%;
+        height: 15vh;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    
+    #listar #cardPerfis #imagem img {
+        width: 70%;
+        height: auto;
+    
+        border-radius: 50%;
+    
+        box-shadow: 0px 3px 5px -3px var(--boxShadow);
+    
+        background-color: var(--text-sample);
+    
+    }
+    
+    /*DECORACAO PERFIL*/
+    
+    #listar #cardPerfis #perfil {
+        width: 100%;
         height: auto;
     
         background-color: var(--backgroundColor-gray);
     
         box-shadow: 0px 3px 5px -5px var(--boxShadow);
     
-        border-radius: 25px;
+    }
     
-        /*background-color: #4B5D68;*/
+    #listar #cardPerfis #perfil #img {
+        width: 100%;
+        height: auto;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        /*background-color: var(--backgroundColor-gray);*/
     
     }
+    
+    #listar #cardPerfis #perfil #img img {
+        width: 100%;
+        height: auto;
+    
+    }
+    
+    #listar #cardPerfis #perfil #dadosUsuario {
+        padding: 2%;
+        width: 96%;
+        height: auto;
+    
+        font-weight: 700;
+        color: var(--text-bold);
+    
+        /*background-color: var(--text-blue);*/
+    
+    }
+    
+    #listar #cardPerfis #perfil #dadosUsuario #nome {
+        font-weight: 700;
+        color: var(--text-bold);
+    
+        /*background-color: #9C69E2;*/
+    
+    }
+    
+    #listar #cardPerfis #perfil #dadosUsuario #descricao {
+        font-weight: 400;
+        font-size: 14px;
+        color: var(--text-sample);
+    
+        /*background-color: #9C69E2;*/
+    
+    }   
+    
+    #listar #cardPerfis #perfil #dadosUsuario #preco {
+        font-weight: 600;
+        font-size: 16px;
+        color: var(--text-bold);
+    
+        /*background-color: #9C69E2;*/
+    
+    } 
+    
+    
+    #listar #cardPerfis #perfil #adicionarProduto {
+        padding: 1%;
+        width: 98%;
+        height: auto;
+    
+    
+    
+    } 
+    
+    #listar #cardPerfis #perfil #adicionarProduto p {
+        font-weight: 700;
+        font-size: 18px;
+        color: var(--text-bold);
+    
+    } 
+    
+    #listar #cardPerfis #perfil #adicionarProduto #resultado {
+        font-weight: 300;
+        font-size: 14px;
+        color: var(--text-bold);
+    
+        /*background-color: #9C69E2;*/
+    
+    } 
+    
+    #listar #cardPerfis #perfil #adicionarProduto #resultado b {
+        font-weight: 500;
+        font-size: 16px;
+        color: var(--text-bold);
+    
+        /*background-color: #9C69E2;*/
+    
+    } 
 
 }
 
@@ -321,21 +490,16 @@ html, body {
         align-items: center;
         justify-content: center;
     
-        /*background-color: #2ab850;*/
-
-        width: 90%;
+        background-color: #2ab850;
+    
+        width: 100%;
         height: auto;
     
     }
     
     #listar {
-        width: 90vw;
+        width: 100% !important;
         height: auto;
-
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
     
         /*background-color: var(--backgroundColor-gray2);*/
     
@@ -344,63 +508,191 @@ html, body {
     #cardPerfis {
         display: inline-flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
     
-        padding: 2%;
-        margin: 2%;
-        width: 100%; /*CONTROLADOR DE DIMENSAO DE PERFIS*/
+        margin: 1%;
+        width: 47%; /*CONTROLADOR DE DIMENSAO DE PERFIS*/
+        height: auto;
+    
+    }
+    
+    /*OPCOES BOTOES*/
+    
+    #listar #cardPerfis #opcoes {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    
+        /*background-color:#9C69E2;*/
+    
+        width: 15%;
+        height: auto;
+    
+        
+    
+    }
+    
+    #listar #cardPerfis #opcoes a { /*AJUSTE DE BOTOES*/
+        list-style: none;
+    
+        padding: 1%;
+        width: 98%;
+        height: 5vh;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        color: var(--text-sample);
+        font-size: 20px;
+    
+    }
+    
+    #listar #cardPerfis #opcoes a svg{
+        transition: color, .5s;
+    
+    }
+    
+    #listar #cardPerfis #opcoes a #edit:hover {
+        color: var(--text-green);
+    
+    }
+    
+    #listar #cardPerfis #opcoes a #remove:hover {
+        color: var(--text-red);
+    
+    }
+    
+    #listar #cardPerfis #opcoes a #add:hover {
+        color: var(--text-yellow);
+    
+    }
+    
+    /*DECORACAO LOGO*/
+    
+    #listar #cardPerfis #imagem {
+        width: 15%;
+        height: 15vh;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    
+    #listar #cardPerfis #imagem img {
+        width: 70%;
+        height: auto;
+    
+        border-radius: 50%;
+    
+        box-shadow: 0px 3px 5px -3px var(--boxShadow);
+    
+        background-color: var(--text-sample);
+    
+    }
+    
+    /*DECORACAO PERFIL*/
+    
+    #listar #cardPerfis #perfil {
+        width: 100%;
         height: auto;
     
         background-color: var(--backgroundColor-gray);
     
         box-shadow: 0px 3px 5px -5px var(--boxShadow);
     
-        border-radius: 25px;
-    
-        /*background-color: #4B5D68;*/
-    
     }
-
-    /*DECORACAO PERFIL*/
-
-    #listar #cardPerfis #perfil {
-        padding: 2%;
-        width: 66%;
-        height: auto;
-
-        /*background-color: var(--backgroundColor-gray);*/
-
-    }
-
-    #listar #cardPerfis #perfil #dadosUsuario {
+    
+    #listar #cardPerfis #perfil #img {
         width: 100%;
         height: auto;
-
-        /*background-color: var(--text-blue);*/
-
+    
+        display: flex;
         align-items: center;
         justify-content: center;
-
-        font-weight: 700;
-        font-size: 13px;
-        color: var(--text-sample);
-
-    }
-
-    #listar #cardPerfis #perfil #dadosUsuario #resultado {
-        font-weight: 400;
-        color: var(--text-sample);
-
-        /*background-color: #9C69E2;*/
-
-    }
-
-    #hr{
-        width: 0.1%;
-        height: 12vh;
-        border-left: 1px solid var(--buttom-purple);
     
-        /*background-color: turquoise;*/
+        /*background-color: var(--backgroundColor-gray);*/
+    
+    }
+    
+    #listar #cardPerfis #perfil #img img {
+        width: 100%;
+        height: auto;
+    
+    }
+    
+    #listar #cardPerfis #perfil #dadosUsuario {
+        padding: 2%;
+        width: 96%;
+        height: auto;
+    
+        font-weight: 700;
+        color: var(--text-bold);
+    
+        /*background-color: var(--text-blue);*/
+    
+    }
+    
+    #listar #cardPerfis #perfil #dadosUsuario #nome {
+        font-weight: 700;
+        color: var(--text-bold);
+    
+        /*background-color: #9C69E2;*/
+    
+    }
+    
+    #listar #cardPerfis #perfil #dadosUsuario #descricao {
+        font-weight: 400;
+        font-size: 14px;
+        color: var(--text-sample);
+    
+        /*background-color: #9C69E2;*/
+    
+    }   
+    
+    #listar #cardPerfis #perfil #dadosUsuario #preco {
+        font-weight: 600;
+        font-size: 16px;
+        color: var(--text-bold);
+    
+        /*background-color: #9C69E2;*/
+    
+    } 
+    
+    
+    #listar #cardPerfis #perfil #adicionarProduto {
+        padding: 1%;
+        width: 98%;
+        height: auto;
+    
+    
+    
+    } 
+    
+    #listar #cardPerfis #perfil #adicionarProduto p {
+        font-weight: 700;
+        font-size: 18px;
+        color: var(--text-bold);
+    
+    } 
+    
+    #listar #cardPerfis #perfil #adicionarProduto #resultado {
+        font-weight: 300;
+        font-size: 14px;
+        color: var(--text-bold);
+    
+        /*background-color: #9C69E2;*/
+    
+    } 
+    
+    #listar #cardPerfis #perfil #adicionarProduto #resultado b {
+        font-weight: 500;
+        font-size: 16px;
+        color: var(--text-bold);
+    
+        /*background-color: #9C69E2;*/
     
     }
 
@@ -412,21 +704,16 @@ html, body {
         align-items: center;
         justify-content: center;
     
-        /*background-color: #2ab850;*/
-
-        width: 90%;
+        background-color: #2ab850;
+    
+        width: 100%;
         height: auto;
     
     }
     
     #listar {
-        width: 90vw;
+        width: 100% !important;
         height: auto;
-
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
     
         /*background-color: var(--backgroundColor-gray2);*/
     
@@ -435,63 +722,191 @@ html, body {
     #cardPerfis {
         display: inline-flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
     
-        padding: 2%;
-        margin: 2%;
-        width: 100%; /*CONTROLADOR DE DIMENSAO DE PERFIS*/
+        margin: 1%;
+        width: 98%; /*CONTROLADOR DE DIMENSAO DE PERFIS*/
+        height: auto;
+    
+    }
+    
+    /*OPCOES BOTOES*/
+    
+    #listar #cardPerfis #opcoes {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    
+        /*background-color:#9C69E2;*/
+    
+        width: 15%;
+        height: auto;
+    
+        
+    
+    }
+    
+    #listar #cardPerfis #opcoes a { /*AJUSTE DE BOTOES*/
+        list-style: none;
+    
+        padding: 1%;
+        width: 98%;
+        height: 5vh;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        color: var(--text-sample);
+        font-size: 20px;
+    
+    }
+    
+    #listar #cardPerfis #opcoes a svg{
+        transition: color, .5s;
+    
+    }
+    
+    #listar #cardPerfis #opcoes a #edit:hover {
+        color: var(--text-green);
+    
+    }
+    
+    #listar #cardPerfis #opcoes a #remove:hover {
+        color: var(--text-red);
+    
+    }
+    
+    #listar #cardPerfis #opcoes a #add:hover {
+        color: var(--text-yellow);
+    
+    }
+    
+    /*DECORACAO LOGO*/
+    
+    #listar #cardPerfis #imagem {
+        width: 15%;
+        height: 15vh;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    
+    #listar #cardPerfis #imagem img {
+        width: 70%;
+        height: auto;
+    
+        border-radius: 50%;
+    
+        box-shadow: 0px 3px 5px -3px var(--boxShadow);
+    
+        background-color: var(--text-sample);
+    
+    }
+    
+    /*DECORACAO PERFIL*/
+    
+    #listar #cardPerfis #perfil {
+        width: 100%;
         height: auto;
     
         background-color: var(--backgroundColor-gray);
     
         box-shadow: 0px 3px 5px -5px var(--boxShadow);
     
-        border-radius: 25px;
-    
-        /*background-color: #4B5D68;*/
-    
     }
-
-    /*DECORACAO PERFIL*/
-
-    #listar #cardPerfis #perfil {
-        padding: 2%;
-        width: 66%;
-        height: auto;
-
-        /*background-color: var(--backgroundColor-gray);*/
-
-    }
-
-    #listar #cardPerfis #perfil #dadosUsuario {
+    
+    #listar #cardPerfis #perfil #img {
         width: 100%;
         height: auto;
-
-        /*background-color: var(--text-blue);*/
-
+    
+        display: flex;
         align-items: center;
         justify-content: center;
-
-        font-weight: 700;
-        font-size: 13px;
-        color: var(--text-sample);
-
-    }
-
-    #listar #cardPerfis #perfil #dadosUsuario #resultado {
-        font-weight: 400;
-        color: var(--text-sample);
-
-        /*background-color: #9C69E2;*/
-
-    }
-
-    #hr{
-        width: 0.1%;
-        height: 12vh;
-        border-left: 1px solid var(--buttom-purple);
     
-        /*background-color: turquoise;*/
+        /*background-color: var(--backgroundColor-gray);*/
+    
+    }
+    
+    #listar #cardPerfis #perfil #img img {
+        width: 100%;
+        height: auto;
+    
+    }
+    
+    #listar #cardPerfis #perfil #dadosUsuario {
+        padding: 2%;
+        width: 96%;
+        height: auto;
+    
+        font-weight: 700;
+        color: var(--text-bold);
+    
+        /*background-color: var(--text-blue);*/
+    
+    }
+    
+    #listar #cardPerfis #perfil #dadosUsuario #nome {
+        font-weight: 700;
+        color: var(--text-bold);
+    
+        /*background-color: #9C69E2;*/
+    
+    }
+    
+    #listar #cardPerfis #perfil #dadosUsuario #descricao {
+        font-weight: 400;
+        font-size: 14px;
+        color: var(--text-sample);
+    
+        /*background-color: #9C69E2;*/
+    
+    }   
+    
+    #listar #cardPerfis #perfil #dadosUsuario #preco {
+        font-weight: 600;
+        font-size: 16px;
+        color: var(--text-bold);
+    
+        /*background-color: #9C69E2;*/
+    
+    } 
+    
+    
+    #listar #cardPerfis #perfil #adicionarProduto {
+        padding: 1%;
+        width: 98%;
+        height: auto;
+    
+    
+    
+    } 
+    
+    #listar #cardPerfis #perfil #adicionarProduto p {
+        font-weight: 700;
+        font-size: 18px;
+        color: var(--text-bold);
+    
+    } 
+    
+    #listar #cardPerfis #perfil #adicionarProduto #resultado {
+        font-weight: 300;
+        font-size: 14px;
+        color: var(--text-bold);
+    
+        /*background-color: #9C69E2;*/
+    
+    } 
+    
+    #listar #cardPerfis #perfil #adicionarProduto #resultado b {
+        font-weight: 500;
+        font-size: 16px;
+        color: var(--text-bold);
+    
+        /*background-color: #9C69E2;*/
     
     }
 
