@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+html, body {
+    font-family: 'Montserrat', sans-serif;
+
+    background-color: var(--backgroundColor-gray2);
+
+}
+
+/*CORES GLOBAIS*/
+
+:root {
+    --text-bold: #212353;
+    --text-sample: #4B5D68;
+    --text-white: #ffffff;
+    --text-black: #000000;
+    --text-red: #d10606;
+    --text-green: #2ab850;
+    --text-yellow: #d9d911;
+
+    --buttom-purple: #9C69E2;
+    --buttom-pink: #F063B8;
+
+    --backgroundColor-pink: #F063B81C;
+    --backgroundColor-green: #68C9BA1C;
+    --backgroundColor-purple: #9C69E21C;
+    --backgroundColor-blue: #2D9CDB1C;
+    --backgroundColor-gray: #f1f1f1;
+    --backgroundColor-gray2: #f9f9f9;
+
+    --boxShadow: #262626;
+
+}
+
+/*CONTAINER*/
+
+#cadastrosPessoas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #2ab850;
+
+    width: 70%;
+    height: auto;
+
+}
+
+#listar {
+    width: 100% !important;
+    height: auto;
+
+    background-color: var(--backgroundColor-gray2);
+
+} 
+
+#cardPerfis {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 1%;
+    width: 31%; /*CONTROLADOR DE DIMENSAO DE PERFIS*/
+    height: auto;
+
+    /*background-color: var(--backgroundColor-gray);*/
+
+    /*box-shadow: 0px 3px 5px -5px var(--boxShadow);*/
+
+    /*background-color: #4B5D68;*/
+
+}
+
+/*OPCOES BOTOES*/
+
+#listar #cardPerfis #opcoes {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    /*background-color:#9C69E2;*/
+
+    width: 15%;
+    height: auto;
+
+    
+
+}
+
+#listar #cardPerfis #opcoes a { /*AJUSTE DE BOTOES*/
+    list-style: none;
+
+    padding: 1%;
+    width: 98%;
+    height: 5vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--text-sample);
+    font-size: 20px;
+
+}
+
+#listar #cardPerfis #opcoes a svg{
+    transition: color, .5s;
+
+}
+
+#listar #cardPerfis #opcoes a #edit:hover {
+    color: var(--text-green);
+
+}
+
+#listar #cardPerfis #opcoes a #remove:hover {
+    color: var(--text-red);
+
+}
+
+#listar #cardPerfis #opcoes a #add:hover {
+    color: var(--text-yellow);
+
+}
+
+/*DECORACAO LOGO*/
+
+#listar #cardPerfis #imagem {
+    width: 15%;
+    height: 15vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#listar #cardPerfis #imagem img {
+    width: 70%;
+    height: auto;
+
+    border-radius: 50%;
+
+    box-shadow: 0px 3px 5px -3px var(--boxShadow);
+
+    background-color: var(--text-sample);
+
+}
+
+/*DECORACAO PERFIL*/
+
+#listar #cardPerfis #perfil {
+    width: 100%;
+    height: auto;
+
+    background-color: var(--backgroundColor-gray);
+
+    box-shadow: 0px 3px 5px -5px var(--boxShadow);
+
+}
+
+#listar #cardPerfis #perfil #img {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /*background-color: var(--backgroundColor-gray);*/
+
+}
+
+#listar #cardPerfis #perfil #img img {
+    width: 100%;
+    height: auto;
+
+}
+
+#listar #cardPerfis #perfil #dadosUsuario {
+    padding: 2%;
+    width: 96%;
+    height: auto;
+
+    font-weight: 700;
+    color: var(--text-bold);
+
+    /*background-color: var(--text-blue);*/
+
+}
+
+#listar #cardPerfis #perfil #dadosUsuario #nome {
+    font-weight: 700;
+    color: var(--text-bold);
+
+    /*background-color: #9C69E2;*/
+
+}
+
+#listar #cardPerfis #perfil #dadosUsuario #descricao {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--text-sample);
+
+    /*background-color: #9C69E2;*/
+
+}   
+
+#listar #cardPerfis #perfil #dadosUsuario #preco {
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--text-bold);
+
+    /*background-color: #9C69E2;*/
+
+} 
+
+
+#listar #cardPerfis #perfil #adicionarProduto {
+    padding: 1%;
+    width: 98%;
+    height: auto;
+
+
+
+} 
+
+#listar #cardPerfis #perfil #adicionarProduto p {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-bold);
+
+} 
+
+#listar #cardPerfis #perfil #adicionarProduto #resultado {
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--text-bold);
+
+    /*background-color: #9C69E2;*/
+
+} 
+
+#listar #cardPerfis #perfil #adicionarProduto #resultado b {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--text-bold);
+
+    /*background-color: #9C69E2;*/
+
+} 
+
+#hr{
+    width: 0.1%;
+    height: 15vh;
+    border-left: 1px solid var(--buttom-purple);
+
+    /*background-color: turquoise;*/
+
+}
+
+@media(min-width: 1024px) {
+
+}
+
+@media(min-width: 768px) and (max-width: 1023px){
+    #cadastrosPessoas {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        /*background-color: #2ab850;*/
+    
+    }
+    
+    #listar {
+        width: 70vw;
+        height: auto;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    
+        /*background-color: var(--backgroundColor-gray2);*/
+    
+    } 
+    
+    #cardPerfis {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+    
+        padding: 2%;
+        margin: 2%;
+        width: 100%; /*CONTROLADOR DE DIMENSAO DE PERFIS*/
+        height: auto;
+    
+        background-color: var(--backgroundColor-gray);
+    
+        box-shadow: 0px 3px 5px -5px var(--boxShadow);
+    
+        border-radius: 25px;
+    
+        /*background-color: #4B5D68;*/
+    
+    }
+
+}
+
+@media(min-width: 361px) and (max-width: 767px){
+    #cadastrosPessoas {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        /*background-color: #2ab850;*/
+
+        width: 90%;
+        height: auto;
+    
+    }
+    
+    #listar {
+        width: 90vw;
+        height: auto;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    
+        /*background-color: var(--backgroundColor-gray2);*/
+    
+    } 
+    
+    #cardPerfis {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+    
+        padding: 2%;
+        margin: 2%;
+        width: 100%; /*CONTROLADOR DE DIMENSAO DE PERFIS*/
+        height: auto;
+    
+        background-color: var(--backgroundColor-gray);
+    
+        box-shadow: 0px 3px 5px -5px var(--boxShadow);
+    
+        border-radius: 25px;
+    
+        /*background-color: #4B5D68;*/
+    
+    }
+
+    /*DECORACAO PERFIL*/
+
+    #listar #cardPerfis #perfil {
+        padding: 2%;
+        width: 66%;
+        height: auto;
+
+        /*background-color: var(--backgroundColor-gray);*/
+
+    }
+
+    #listar #cardPerfis #perfil #dadosUsuario {
+        width: 100%;
+        height: auto;
+
+        /*background-color: var(--text-blue);*/
+
+        align-items: center;
+        justify-content: center;
+
+        font-weight: 700;
+        font-size: 13px;
+        color: var(--text-sample);
+
+    }
+
+    #listar #cardPerfis #perfil #dadosUsuario #resultado {
+        font-weight: 400;
+        color: var(--text-sample);
+
+        /*background-color: #9C69E2;*/
+
+    }
+
+    #hr{
+        width: 0.1%;
+        height: 12vh;
+        border-left: 1px solid var(--buttom-purple);
+    
+        /*background-color: turquoise;*/
+    
+    }
+
+}
+
+@media(max-width: 360px){
+    #cadastrosPessoas {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        /*background-color: #2ab850;*/
+
+        width: 90%;
+        height: auto;
+    
+    }
+    
+    #listar {
+        width: 90vw;
+        height: auto;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    
+        /*background-color: var(--backgroundColor-gray2);*/
+    
+    } 
+    
+    #cardPerfis {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+    
+        padding: 2%;
+        margin: 2%;
+        width: 100%; /*CONTROLADOR DE DIMENSAO DE PERFIS*/
+        height: auto;
+    
+        background-color: var(--backgroundColor-gray);
+    
+        box-shadow: 0px 3px 5px -5px var(--boxShadow);
+    
+        border-radius: 25px;
+    
+        /*background-color: #4B5D68;*/
+    
+    }
+
+    /*DECORACAO PERFIL*/
+
+    #listar #cardPerfis #perfil {
+        padding: 2%;
+        width: 66%;
+        height: auto;
+
+        /*background-color: var(--backgroundColor-gray);*/
+
+    }
+
+    #listar #cardPerfis #perfil #dadosUsuario {
+        width: 100%;
+        height: auto;
+
+        /*background-color: var(--text-blue);*/
+
+        align-items: center;
+        justify-content: center;
+
+        font-weight: 700;
+        font-size: 13px;
+        color: var(--text-sample);
+
+    }
+
+    #listar #cardPerfis #perfil #dadosUsuario #resultado {
+        font-weight: 400;
+        color: var(--text-sample);
+
+        /*background-color: #9C69E2;*/
+
+    }
+
+    #hr{
+        width: 0.1%;
+        height: 12vh;
+        border-left: 1px solid var(--buttom-purple);
+    
+        /*background-color: turquoise;*/
+    
+    }
+
+}
