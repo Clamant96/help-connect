@@ -1,0 +1,4245 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+html, body {
+    background-color: var(--background-body);
+
+    font-family: 'Montserrat', sans-serif;
+
+    height: 100%;
+
+    overflow: hidden;
+    overflow-y: scroll;
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+
+}
+
+:root {
+    --background-body: #f1f1f1;
+    --background-header: #f9f9f9;
+    --background-black: #000000;
+
+    --text-white: #ffffff;
+    --text-black: #000000;
+    --text-purple: #38095c;
+    --text-purple-tranparent: #38095c9a;
+    --text-gray: #919496;
+    --text-light-gray: #e0e0e0;
+    --text-light-gray2: #d4d4d4;
+    --text-blue-light: #07a4dc;
+    --text-blue: #166386;
+    --text-green: #0d9d10;
+    --text-light-green: #1aa21d;
+    --text-light-orange: #ff881a;
+    --text-orange: #ff5d01;
+    --text-light-blue-cart: #4480c1;
+    --text-blue-cart: #032a63;
+    --text-light-white: #fdfdfd;
+    --text-dark-white: #dddddd;
+    
+    
+    --alert-gren: #99cc333a;
+    --alert-text-gren: #339900;
+    --alert-red: #d453283a;
+    --alert-text-red: #a32a02;
+
+    --box-shadown: #262626;
+    --box-smooth-shadown: #2626269a;
+
+    --mandatory-red: #ad3737;
+    --mandatory-input: #de1616;
+    --mandatory-input-ok: #44cc3d;
+
+}
+
+/*MENU SIDEBAR*/
+#sideBar {
+    position: fixed;
+
+    margin-left: -22%;
+    
+    width: 20%;
+    height: 100%;
+
+    background-color: var(--background-header);
+
+    box-shadow: 0px 0px 5px -2px var(--box-shadown);
+    
+    transition: margin-left, .5s;
+
+    z-index: 1;
+
+}
+
+#sideBar ul {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+}
+
+#sideBar ul a {
+    text-decoration: none;
+
+}
+
+#sideBar ul a li {
+    padding: 5%;
+
+    width: 90%;
+    height: auto;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    color: var(--text-black);
+
+    text-transform: uppercase;
+
+    transition: background-color, color, .5s;
+
+}
+
+#sideBar ul a li:hover {
+    color: var(--text-white);
+
+    background-color: var(--text-light-orange); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-orange) , var(--text-orange));
+
+}
+
+/*CONTAINER*/
+#container {
+    width: 100%;
+    height: auto;
+
+    background-color: var(--background-header);
+
+}
+
+/* HEADER */
+#container header {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    background-color: var(--background-header);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url(../img/backgroundCompleto.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    box-shadow: 0px 2px 5px -4px var(--box-shadown);
+
+}
+
+#container header #headerMenu {
+    width: 70%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+/*ICON - MENU*/
+#container header #headerMenu #img {
+    width: 2%;
+    height: auto;
+
+    cursor: pointer;
+
+}
+
+#container header #headerMenu #img svg {
+    width: 100%;
+    height: auto;
+
+}
+
+/*ICON - PERSON*/
+#container header #headerMenu #person {
+    width: 3%;
+    height: auto;
+
+    cursor: pointer;
+
+}
+
+#container header #headerMenu #person a {
+    text-decoration: none;
+
+    color: var(--text-black);
+
+}
+
+#container header #headerMenu #person svg {
+    width: 70%;
+    height: auto;
+
+}
+
+/*LOGO*/
+#container header #headerMenu #logo {
+    width: 10%;
+    height: auto;
+
+}
+
+#container header #headerMenu #logo img {
+    width: 100%;
+    height: auto;
+
+}
+
+/*FOOTER*/
+#container footer {
+    /* position: absolute;
+    
+    bottom: 0; */
+
+    padding: 5% 5% 0% 5%;
+
+    width: 90%;
+    height: auto;
+
+    background-color: var(--background-black);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#container footer #footer {
+    width: 80%;
+    height: auto;
+
+    /* background-color: aqua; */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+/*FOOTER - LOGO*/
+#container footer #footer #logo {
+    width: 20%;
+    height: auto;
+
+    /* background-color: bisque; */
+
+}
+
+#container footer #footer #logo img {
+    width: 100%;
+    height: auto;
+
+}
+
+/*FOOTER - MENU*/
+#container footer #footer #menuFooter {
+    width: 10%;
+    height: auto;
+
+    /* background-color: blue; */
+
+}
+
+#container footer #footer #menuFooter p {
+    padding: 5%;
+
+    width: 90%;
+    height: auto;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    color: var(--text-gray);
+
+    text-transform: uppercase;
+
+}
+
+#container footer #footer #menuFooter ul {
+    list-style: none;
+
+    width: 100%;
+    height: auto;
+
+}
+
+#container footer #footer #menuFooter ul a {
+    text-decoration: none;
+
+}
+
+#container footer #footer #menuFooter ul a li {
+    padding: 5%;
+
+    width: 90%;
+    height: auto;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    color: var(--text-white);
+
+    transition: color, .5s;
+
+}
+
+#container footer #footer #menuFooter ul a li:hover {
+    color: var(--text-purple);
+
+}
+
+/*FOOTER - CONTATOS*/
+#container footer #footer #contatoFooter {
+    width: 20%;
+    height: auto;
+
+    /* background-color: blue; */
+
+}
+
+#container footer #footer #contatoFooter p {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    color: var(--text-gray);
+
+    text-transform: uppercase;
+
+}
+
+#container footer #footer #contatoFooter ul {
+    list-style: none;
+
+    width: 100%;
+    height: auto;
+
+}
+
+#container footer #footer #contatoFooter ul li {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    color: var(--text-white);
+
+}
+
+/*FOOTER - REDES SOCIAIS*/
+#container footer #footer #iconsFooter {
+    width: 20%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container footer #footer #iconsFooter #icon {
+    margin: 5%;
+
+    width: 20%;
+    height: auto;
+
+}
+
+#container footer #footer #iconsFooter #icon img {
+    padding: 20%;
+
+    width: 60%;
+    height: auto;
+
+    background-color: var(--text-purple);
+
+    border-radius: 10px;
+
+}
+
+/*FOOTER - Copyright*/
+#container footer #copyright {
+    padding: 3%;
+
+    width: 94%;
+    height: auto;
+
+    /* background-color: aqua; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container footer #copyright p {
+    font-size: 12px;
+    font-weight: 600;
+
+    color: var(--text-white);
+
+}
+
+#container footer #copyright p b {
+    font-size: 12px;
+    font-weight: 800;
+
+    color: var(--text-white);
+
+}
+
+/*SECTION - HOME*/
+#container section {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #conteudo {
+    width: 80%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #conteudo #recepcao {
+    padding: 2% 2% 0% 2%;
+
+    width: 96%;
+    height: auto;
+
+    color: var(--text-black);
+
+}
+
+#container section #conteudo #recepcao b {
+    color: var(--text-purple);
+
+}
+
+#container section #conteudo #recepcao b a {
+    text-decoration: none;
+
+    color: var(--text-black);
+
+}
+
+#container section #conteudo #recepcao i {
+    font-size: 10px;
+    font-weight: 400;
+    font-style: normal;
+
+    color: var(--text-gray);
+
+    text-transform: uppercase;
+
+}
+
+#container section #conteudo #apresentacao {
+    padding: 3%;
+
+    width: 44%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#container section #conteudo #apresentacao h1 {
+    width: 100%;
+    height: auto;
+
+    font-size: 50px;
+    font-weight: 800;
+
+    color: var(--text-purple);
+
+}
+
+#container section #conteudo #apresentacao p {
+    width: 100%;
+    height: auto;
+
+    font-size: 20px;
+    font-weight: 400;
+
+    color: var(--text-black);
+
+}
+
+#container section #conteudo #apresentacao #botao {
+    padding: 3%;
+
+    width: 94%;
+    height: auto;
+
+}
+
+#container section #conteudo #apresentacao #botao a {
+    width: 100%;
+    height: auto;
+
+    text-decoration: none;
+
+}
+
+#container section #conteudo #apresentacao #botao a #button {
+    padding: 3%;
+
+    width: 34%;
+    height: auto;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    color: var(--text-white);
+
+    text-transform: uppercase;
+
+    background-color: var(--text-light-blue-cart); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-blue-cart) , var(--text-blue-cart));
+
+    border: none;
+    border-radius: 30px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    box-shadow: 0px 3px 5px -3px var(--box-shadown);
+
+    transition: background-color, color, box-shadow, .5s;
+
+}
+
+#container section #conteudo #apresentacao #botao #button:hover {
+    background-color: var(--background-black);
+
+    color: var(--text-gray);
+
+    box-shadow: 0px 0px 0px 0px var(--box-shadown);
+
+}
+
+#container section #conteudo #img {
+    padding: 3%;
+
+    width: 44%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #conteudo #img img {
+    width: 100%;
+    height: auto;
+
+}
+
+/*PRODUTOS*/
+
+#container section #produtos {
+    padding: 1%;
+
+    width: 78%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+}
+
+/*CARD*/
+#container section #produtos #card {
+    padding: 1%;
+
+    min-width: 31.3333%;
+    max-width: 31.3333%;
+    height: auto;
+
+    flex: 1;
+
+}
+
+#container section #produtos #card #img {
+    width: 100%;
+    height: auto;
+
+}
+
+#container section #produtos #card #img img {
+    width: 100%;
+    height: auto;
+
+}
+
+#container section #produtos #card #produto {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+    /* background-color: aquamarine; */
+
+}
+
+#container section #produtos #card #produto h1 {
+    width: 100%;
+    height: auto;
+
+    font-size: 20px;
+    font-weight: 800;
+
+    color: var(--text-black);
+
+    text-transform: uppercase;
+
+    /* background-color: blueviolet; */
+
+}
+
+#container section #produtos #card #produto p {
+    width: 100%;
+    height: auto;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    color: var(--text-black);
+
+    /* background-color: blueviolet; */
+
+}
+
+#container section #produtos #card #produto h2 {
+    width: 100%;
+    height: auto;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: var(--text-purple);
+
+    text-transform: uppercase;
+    text-align: right;
+
+    /* background-color: blueviolet; */
+
+}
+
+/*CARD COLLAPSIBLE*/
+.collapsible {
+    background-color: var(--text-light-blue-cart); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-blue-cart) , var(--text-blue-cart));
+
+    color: white;
+
+    cursor: pointer;
+
+    padding: 2%;
+
+    width: 100%;
+    margin: 1% 0% 0% 0%;
+
+    border: none;
+
+    text-align: left;
+
+    outline: none;
+
+    font-size: 15px;
+
+}
+
+.active, .collapsible:hover {
+    background-color: #555;
+
+}
+
+.collapsible:after {
+    content: '\002B';
+
+    color: var(--background-body);
+
+    font-weight: bold;
+
+    float: right;
+
+    margin-left: 5px;
+
+}
+
+.active:after {
+    content: "\2212";
+
+}
+
+.content {
+    padding: 0 18px;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: max-height 0.2s ease-out;
+
+    background-color: var(--background-body);
+
+}
+
+#container section #produtos #card .content #produto {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+}
+
+#container section #produtos #card .content #produto h1 {
+    width: 100%;
+    height: auto;
+
+    font-size: 16px;
+    font-weight: 800;
+
+    color: var(--text-blue) !important;
+
+    text-transform: uppercase;
+
+    /* background-color: blueviolet; */
+
+}
+
+#container section #produtos #card .content #produto p {
+    width: 100%;
+    height: auto;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    color: var(--text-black);
+
+    /* background-color: blueviolet; */
+
+}
+
+#container section #produtos #card .content #produto h2 {
+    width: 100%;
+    height: auto;
+
+    font-size: 18px !important;
+    font-weight: 600 !important;
+
+    color: var(--text-light-green) !important;
+
+    text-transform: uppercase;
+    text-align: right;
+
+    /* background-color: blueviolet; */
+
+}
+
+/*H1, P, H2 - INDEX*/
+#container section #produtos #card .content #produto #h1 {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    font-size: 16px;
+    font-weight: 800;
+
+    color: var(--text-black);
+
+    text-transform: uppercase;
+
+    /* background-color: blueviolet; */
+
+}
+
+#container section #produtos #card .content #produto #p {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    color: var(--text-black);
+
+    /* background-color: blueviolet; */
+
+}
+
+#container section #produtos #card .content #produto #h2 {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: var(--text-purple);
+
+    text-transform: uppercase;
+    text-align: right;
+
+    /* background-color: blueviolet; */
+
+}
+
+/*-----------------*/
+
+#container section #produtos #card .content #opcoes {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+    /* background-color: #919496; */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#container section #produtos #card .content #opcoes a {
+    width: 100%;
+    height: auto;
+
+    /* background-color: #f9f9f9; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    cursor: default;
+
+}
+
+#container section #produtos #card .content #opcoes a svg {
+    width: 15%;
+    height: auto;
+
+    /* background-color: darkcyan; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--text-black);
+
+    transition: color, .5s;
+
+    cursor: pointer;
+
+}
+
+#container section #produtos #card .content #opcoes a svg:hover {
+    color: var(--text-gray);
+
+}
+
+/*CLIENTES*/
+
+#container section #clientes {
+    padding: 1%;
+
+    width: 78%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+}
+
+/*CARD*/
+#container section #clientes #card {
+    padding: 1%;
+    margin: 1%;
+
+    min-width: 29.3333%;
+    max-width: 29.3333%;
+    height: auto;
+
+    flex: 1;
+
+}
+
+#container section #clientes #card #img {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#container section #clientes #card #img img {
+    width: 100%;
+    height: auto;
+
+}
+
+#container section #clientes #card #img svg {
+    padding: 5%;
+
+    width: 20%;
+    height: auto;
+
+}
+
+#container section #clientes #card #cliente {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+    /* background-color: aquamarine; */
+
+}
+
+#container section #clientes #card #cliente h1 {
+    width: 100%;
+    height: auto;
+
+    font-size: 20px;
+    font-weight: 800;
+
+    color: var(--text-purple);
+
+    text-transform: uppercase;
+
+    /* background-color: blueviolet; */
+
+}
+
+#container section #clientes #card #cliente p {
+    width: 100%;
+    height: auto;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    color: var(--text-black);
+
+    /* background-color: blueviolet; */
+
+}
+
+#container section #clientes #card #cliente h2 {
+    width: 100%;
+    height: auto;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: var(--text-purple);
+
+    text-transform: uppercase;
+    text-align: right;
+
+    /* background-color: blueviolet; */
+
+}
+
+/*CARD COLLAPSIBLE*/
+#container section #clientes #card .collapsible {
+    background-color: var(--text-light-blue-cart); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-blue-cart) , var(--text-blue-cart));
+
+    color: white;
+
+    cursor: pointer;
+
+    padding: 2%;
+
+    width: 100%;
+    margin: 0% 1% 1% 0%;
+
+    border: none;
+
+    text-align: left;
+
+    outline: none;
+
+    font-size: 15px;
+
+}
+
+.active, .collapsible:hover {
+    background-color: #555;
+
+}
+
+#container section #clientes #card .collapsible:after {
+    content: '\002B';
+
+    color: var(--background-body);
+
+    font-weight: bold;
+
+    float: right;
+
+    margin-left: 5px;
+
+}
+
+.active:after {
+    content: "\2212";
+
+}
+
+#container section #clientes #card .content {
+    padding: 0 18px;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: max-height 0.2s ease-out;
+
+    background-color: var(--background-body);
+
+}
+
+#container section #clientes #card .content #produto {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+}
+
+#container section #clientes #card .content #produto h1 {
+    width: 100%;
+    height: auto;
+
+    font-size: 16px;
+    font-weight: 800;
+
+    color: var(--text-black);
+
+    text-transform: uppercase;
+
+    /* background-color: blueviolet; */
+
+}
+
+#container section #clientes #card .content #produto p {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    color: var(--text-black);
+
+    /* background-color: blueviolet; */
+
+}
+
+#container section #clientes #card .content #produto h2 {
+    width: 100%;
+    height: auto;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: var(--text-purple);
+
+    text-transform: uppercase;
+    text-align: right;
+
+    /* background-color: blueviolet; */
+
+}
+
+#container section #clientes #card .content #opcoes {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+    /* background-color: #919496; */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+/*BOTOES ALTERAR E EXCLUIR*/
+
+#container section #clientes #card .content #opcoes #botoes {
+    padding: 1%;
+
+    width: 46%;
+    height: auto;
+
+    /* background-color: turquoise; */
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    cursor: pointer;
+
+}
+
+#container section #clientes #card .content #opcoes #botoes #comprar {
+    margin: 1%;
+
+    width: 98%;
+    height: auto;
+
+    background-color: var(--text-light-orange); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-orange) , var(--text-orange));
+
+    border-radius: 10px;
+
+}
+
+#container section #clientes #card .content #opcoes #botoes #comprar a {
+    text-decoration: none;
+
+    width: 100%;
+    height: auto;
+
+    /* background-color: violet; */
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+    
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #clientes #card .content #opcoes #botoes #comprar a #icon {
+    padding: 3%;
+
+    width: 14%;
+    height: auto;
+
+    background-color: var(--text-light-blue-cart); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-blue-cart) , var(--text-blue-cart));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px 0px 0px 10px;
+
+}
+
+#container section #clientes #card .content #opcoes #botoes #comprar a #icon svg {
+    width: 100%;
+    height: auto;
+
+    color: var(--text-white);
+
+}
+
+#container section #clientes #card .content #opcoes #botoes #comprar a p {
+    padding: 3%;
+
+    width: 74%;
+    height: auto;
+    
+    background-color: var(--text-light-orange); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-orange) , var(--text-orange));
+
+    font-size: 16px;
+    font-weight: 700;
+
+    color: var(--text-white);
+
+    text-transform: uppercase;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0px 10px 10px 0px;
+
+}
+
+/*-------------------------*/
+
+/*INCLUIR CLIENTES*/
+
+#container section #clientes #card #incluir #opcoes #botoes {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    /* background-color: turquoise; */
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    cursor: pointer;
+
+}
+
+#container section #clientes #card #incluir #opcoes #botoes #comprar {
+    margin: 1%;
+
+    width: 98%;
+    height: auto;
+
+    background-color: var(--text-light-orange); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-orange) , var(--text-orange));
+
+    border-radius: 10px;
+
+}
+
+#container section #clientes #card #incluir #opcoes #botoes #comprar a {
+    text-decoration: none;
+
+    width: 100%;
+    height: auto;
+
+    /* background-color: violet; */
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+    
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #clientes #card #incluir #opcoes #botoes #comprar a #icon {
+    padding: 3%;
+
+    width: 14%;
+    height: auto;
+
+    background-color: var(--text-light-blue-cart); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-blue-cart) , var(--text-blue-cart));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px 0px 0px 10px;
+
+}
+
+#container section #clientes #card #incluir #opcoes #botoes #comprar a #icon svg {
+    width: 100%;
+    height: auto;
+
+    color: var(--text-white);
+
+}
+
+#container section #clientes #card #incluir #opcoes #botoes #comprar a p {
+    padding: 3%;
+
+    width: 74%;
+    height: auto;
+    
+    font-size: 16px;
+    font-weight: 700;
+
+    color: var(--text-white);
+
+    text-transform: uppercase;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0px 10px 10px 0px;
+
+}
+
+/*LOCALIDADE*/
+#container section #localidade {
+    width: 100%;
+    height: 80vh;
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+
+}
+
+#container section #localidade iframe {
+    width: 100%;
+    height: 100%;
+
+}
+
+/*ENVIAR DUVIDA*/
+#container section #pergunta {
+    padding: 2%;
+
+    width: 76%;
+    height: auto;
+
+    /* background-color: antiquewhite; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #pergunta form {
+    width: 100%;
+    height: auto;
+
+    /* background-color: aqua; */
+
+}
+
+#container section #pergunta form #texto {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    /* background-color: blue; */
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#container section #pergunta form #texto p {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    /* background-color: brown; */
+
+    font-size: 16px;
+    font-weight: 700;
+
+    color: var(--text-blue);
+
+    text-transform: uppercase;
+
+}
+
+#container section #pergunta form #texto textarea {
+    padding: 1%;
+    margin: 1%;
+
+    width: 96%;
+    height: auto;
+
+    /* background-color: cadetblue; */
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+
+    border: none;
+    border-radius: 5px;
+
+}
+
+#container section #pergunta form #texto #invalido {
+    border: 2px solid var(--mandatory-input);
+
+}
+
+#container section #pergunta form #texto #textoFeedback {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+}
+
+#container section #pergunta form #texto .feedback {
+    font-size: 14px;
+    font-weight: 600;
+
+    color: var(--mandatory-input);
+
+}
+
+#container section #pergunta form #texto .none {
+    display: none;
+
+}
+
+#container section #pergunta form #email {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    /* background-color: chartreuse; */
+
+}
+
+#container section #pergunta form #email p {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    /* background-color: coral; */
+
+    font-size: 16px;
+    font-weight: 700;
+
+    color: var(--text-blue);
+
+    text-transform: uppercase;
+
+}
+
+#container section #pergunta form #email #enviar {
+    width: 100%;
+    height: auto;
+
+    /* background-color: cornflowerblue; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #pergunta form #email #enviar input {
+    padding: 1%;
+    margin: 1%;
+
+    width: 78%;
+    height: auto;
+
+    /* background-color: darkgoldenrod; */
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+
+    border: none;
+    border-radius: 5px;
+
+}
+
+#container section #pergunta form #email #enviar button {
+    padding: 1%;
+    margin: 1%;
+
+    width: 18%;
+    height: auto;
+
+    background-color: var(--text-light-orange); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-orange) , var(--text-orange));
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: var(--text-white);
+
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+}
+
+#container section #pergunta form #email #enviar #invalido {
+    border: 2px solid var(--mandatory-input);
+
+}
+
+#container section #pergunta form #email #textoFeedback {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+    
+}
+
+#container section #pergunta form #email .feedback {
+    font-size: 14px;
+    font-weight: 600;
+
+    color: var(--mandatory-input);
+    
+}
+
+#container section #pergunta form #email .none {
+    display: none;
+    
+}
+
+#container section #pergunta form #titulo {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    /* background-color: chartreuse; */
+
+}
+
+#container section #pergunta form #titulo p {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    /* background-color: coral; */
+
+    font-size: 16px;
+    font-weight: 700;
+
+    color: var(--text-blue);
+
+    text-transform: uppercase;
+
+}
+
+#container section #pergunta form #titulo #enviar {
+    width: 100%;
+    height: auto;
+
+    /* background-color: cornflowerblue; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #pergunta form #titulo #enviar input {
+    padding: 1%;
+    margin: 1%;
+
+    width: 98%;
+    height: auto;
+
+    /* background-color: darkgoldenrod; */
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+
+    border: none;
+    border-radius: 5px;
+
+}
+
+#container section #pergunta form #titulo #enviar button {
+    padding: 1%;
+    margin: 1%;
+
+    width: 18%;
+    height: auto;
+
+    background-color: var(--text-light-orange); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-orange) , var(--text-orange));
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: var(--text-white);
+
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+        
+}
+
+#container section #pergunta form #titulo #enviar #invalido {
+    border: 2px solid var(--mandatory-input);
+
+}
+
+#container section #pergunta form #titulo #textoFeedback {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+    
+}
+
+#container section #pergunta form #titulo .feedback {
+    font-size: 14px;
+    font-weight: 600;
+
+    color: var(--mandatory-input);
+    
+}
+
+#container section #pergunta form #titulo .none {
+    display: none;
+    
+}
+
+/*SOBRE NOS*/
+#container section #sobre {
+    margin-bottom: 2%;
+
+    width: 70%;
+    height: auto;
+
+}
+
+#container section #sobre h1 {
+    padding: 2% 2% 0% 2%;
+
+    width: 96%;
+    height: auto;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    color: var(--text-purple);
+
+}
+
+#container section #sobre h2 {
+    padding: 2% 2% 0% 2%;
+
+    width: 96%;
+    height: auto;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    color: var(--text-purple);
+
+}
+
+#container section #sobre p {
+    padding: 0.5% 2% 0% 2%;
+
+    width: 96%;
+    height: auto;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    color: var(--text-black);
+
+}
+
+#container section #sobre ul {
+    list-style: none;
+
+    width: 100%;
+    height: auto;
+
+}
+
+#container section #sobre ul li {
+    padding: 0.5% 2% 0% 2%;
+
+    width: 96%;
+    height: auto;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    color: var(--text-black);
+
+}
+
+/*BOTOES ALTERAR E EXCLUIR*/
+
+#container section #produtos #card .content #opcoes #botoes {
+    padding: 1%;
+
+    width: 46%;
+    height: auto;
+
+    /* background-color: turquoise; */
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    cursor: pointer;
+
+}
+
+#container section #produtos #card .content #opcoes #botoes #comprar {
+    margin: 1%;
+
+    width: 98%;
+    height: auto;
+
+    background-color: var(--text-light-orange); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-orange) , var(--text-orange));
+
+    border-radius: 10px;
+
+}
+
+#container section #produtos #card .content #opcoes #botoes #comprar a {
+    text-decoration: none;
+
+    width: 100%;
+    height: auto;
+
+    /* background-color: violet; */
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+    
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #produtos #card .content #opcoes #botoes #comprar a #icon {
+    padding: 3%;
+
+    width: 14%;
+    height: auto;
+
+    background-color: var(--text-light-blue-cart); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-blue-cart) , var(--text-blue-cart));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px 0px 0px 10px;
+
+}
+
+#container section #produtos #card .content #opcoes #botoes #comprar a #icon svg {
+    width: 100%;
+    height: auto;
+
+    color: var(--text-white);
+
+}
+
+#container section #produtos #card .content #opcoes #botoes #comprar a p {
+    padding: 3%;
+
+    width: 74%;
+    height: auto;
+    
+    background-color: var(--text-light-orange); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-orange) , var(--text-orange));
+
+    font-size: 16px;
+    font-weight: 700;
+
+    color: var(--text-white);
+
+    text-transform: uppercase;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0px 10px 10px 0px;
+
+}
+
+/*-------------------------*/
+
+/*INCLUIR CLIENTES*/
+
+#container section #produtos #card #incluir #opcoes #botoes {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    /* background-color: turquoise; */
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    cursor: pointer;
+
+}
+
+#container section #produtos #card #incluir #opcoes #botoes #comprar {
+    margin: 1%;
+
+    width: 98%;
+    height: auto;
+
+    background-color: var(--text-light-orange); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-orange) , var(--text-orange));
+
+    border-radius: 10px;
+
+}
+
+#container section #produtos #card #incluir #opcoes #botoes #comprar a {
+    text-decoration: none;
+
+    width: 100%;
+    height: auto;
+
+    /* background-color: violet; */
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+    
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #produtos #card #incluir #opcoes #botoes #comprar a #icon {
+    padding: 3%;
+
+    width: 14%;
+    height: auto;
+
+    background-color: var(--text-light-blue-cart); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-blue-cart) , var(--text-blue-cart));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px 0px 0px 10px;
+
+}
+
+#container section #produtos #card #incluir #opcoes #botoes #comprar a #icon svg {
+    width: 100%;
+    height: auto;
+
+    color: var(--text-white);
+
+}
+
+#container section #produtos #card #incluir #opcoes #botoes #comprar a p {
+    padding: 3%;
+
+    width: 74%;
+    height: auto;
+    
+    font-size: 16px;
+    font-weight: 700;
+
+    color: var(--text-white);
+
+    text-transform: uppercase;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0px 10px 10px 0px;
+
+}
+
+/*OPCOES ALTERACAO EXCLUSAO - PRODUTOS*/
+
+#container section #produtos #card #img #opcoes {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+    /* background-color: #919496; */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+#container section #produtos #card #img #opcoes a {
+    width: 100%;
+    height: auto;
+
+    /* background-color: #f9f9f9; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    cursor: default;
+    
+}
+
+#container section #produtos #card #img #opcoes a svg {
+    width: 15%;
+    height: auto;
+
+    /* background-color: darkcyan; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--text-black);
+
+    transition: color, .5s;
+
+    cursor: pointer;
+    
+}
+
+#container section #produtos #card #img #opcoes a svg:hover {
+    color: var(--text-gray);
+    
+}
+
+/*OPCOES ALTERACAO EXCLUSAO - CLIENTES*/
+
+#container section #clientes #card #img #opcoes {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+    /* background-color: #919496; */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+#container section #clientes #card #img #opcoes a {
+    width: 100%;
+    height: auto;
+
+    /* background-color: #f9f9f9; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    cursor: default;
+    
+}
+
+#container section #clientes #card #img #opcoes a svg {
+    width: 15%;
+    height: auto;
+
+    /* background-color: darkcyan; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--text-black);
+
+    transition: color, .5s;
+
+    cursor: pointer;
+    
+}
+
+#container section #clientes #card #img #opcoes a svg:hover {
+    color: var(--text-gray);
+    
+}
+
+/*INCLUIR PRODUTOS*/
+#container section #telaCadastro {
+    padding: 5%;
+
+    width: 40%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* background-color: turquoise; */
+
+}
+
+/*IMG - LOGO*/
+
+#container section #telaCadastro #logo {
+    width: 50%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #telaCadastro #logo #imagem {
+    width: 80%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#container section #telaCadastro #logo #imagem img {
+    width: 100%;
+    height: auto;
+
+}
+
+#container section #telaCadastro #logo #imagem p {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    color: var(--text-blue-cart);
+
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+/*----------*/
+
+#container section #barra {
+    width: 0%;
+    height: 40vh;
+
+    border-bottom: 0px solid var(--text-blue-cart);
+    border-top: 0px solid var(--text-blue-cart);
+    border-left: 3px solid var(--text-blue-cart);
+    border-right: 0px solid var(--text-blue-cart);
+
+}
+
+#container section #telaCadastro #form {
+    width: 100%;
+    height: auto;
+
+}
+
+#container section #telaCadastro #form h1 {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    color: var(--text-blue-cart);
+
+}
+
+/*DECORACAO FORMULARIO*/
+
+#container section #telaCadastro #form #container {
+    padding: 5%;
+
+    width: 90%;
+    height: auto;
+
+    border-radius: 10px;
+
+    background-image: url(../img/backgroundCompleto.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 300%;
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+
+}
+
+/*MENSAGEM ALERTA*/
+
+#alertaSucesso {
+    padding: 4%;
+    margin: 4%;
+
+    width: 84%;
+    height: auto;
+
+    background-color: var(--alert-gren);
+
+    border-radius: 15px;
+    border: 1px solid var(--alert-text-gren);
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+
+}
+
+#alertaSucesso p {
+    font-size: 12px;
+    font-weight: 700;
+
+    color: var(--alert-text-gren);
+
+}
+
+#alertaErro {
+    padding: 4%;
+    margin: 4%;
+
+    width: 84%;
+    height: auto;
+
+    background-color: var(--alert-red);
+
+    border-radius: 15px;
+    border: 1px solid var(--alert-text-red);
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+
+}
+
+#alertaErro p {
+    font-size: 12px;
+    font-weight: 700;
+
+    color: var(--alert-text-red);
+
+}
+
+/*FORMULARIO - NOME*/
+
+#container section #telaCadastro #form #container #nome {
+    padding: 2%;
+    width: 96%;
+    height: auto;
+
+    /*background-color: darkblue;*/
+
+}
+
+#container section #telaCadastro #form #container #nome p {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-blue-cart);
+
+    padding: 1%;
+    width: 98%;
+    height: auto;
+
+}
+
+#container section #telaCadastro #form #container #nome p b {
+    color: var(--mandatory-red);
+
+    font-size: 16px;
+    font-weight: 400;
+
+}
+
+#container section #telaCadastro #form #container #nome input {
+    padding: 3%;
+    width: 94%;
+    height: auto;
+
+    border: none;
+
+    font-size: 14px;
+    font-weight: 100;
+    color: var(--text-black);
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+
+    transition: background-color, .5s;
+
+    border-radius: 10px;
+
+}
+
+#container section #telaCadastro #form #container #nome #invalido {
+    border: 2px solid var(--mandatory-input);
+
+}
+
+#container section #telaCadastro #form #container #nome #textoFeedback {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+}
+
+#container section #telaCadastro #form #container #nome .feedback {
+    font-size: 14px;
+    font-weight: 600;
+
+    color: var(--mandatory-input);
+
+}
+
+#container section #telaCadastro #form #container #nome .none {
+    display: none;
+
+}
+
+/*FORMULARIO - E-MAIL*/
+
+#container section #telaCadastro #form #container #email {
+    padding: 2%;
+    width: 96%;
+    height: auto;
+
+    /*background-color: darkblue;*/
+
+}
+
+#container section #telaCadastro #form #container #email p {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-blue-cart);
+
+    padding: 1%;
+    width: 98%;
+    height: auto;
+
+}
+
+#container section #telaCadastro #form #container #email p b {
+    color: var(--mandatory-red);
+
+    font-size: 16px;
+    font-weight: 400;
+
+}
+
+#container section #telaCadastro #form #container #email input {
+    padding: 3%;
+    width: 94%;
+    height: auto;
+
+    border: none;
+
+    font-size: 14px;
+    font-weight: 100;
+    color: var(--text-black);
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+
+    transition: background-color, .5s;
+
+    border-radius: 10px;
+
+}
+
+#container section #telaCadastro #form #container #email #invalido {
+    border: 2px solid var(--mandatory-input);
+
+}
+
+#container section #telaCadastro #form #container #email #textoFeedback {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+}
+
+#container section #telaCadastro #form #container #email .feedback {
+    font-size: 14px;
+    font-weight: 600;
+
+    color: var(--mandatory-input);
+
+}
+
+#container section #telaCadastro #form #container #email .none {
+    display: none;
+
+}
+
+/*FORMULARIO - SENHA*/
+
+#container section #telaCadastro #form #container #senha {
+    padding: 2%;
+    width: 96%;
+    height: auto;
+
+    /*background-color: darkblue;*/
+
+}
+
+#container section #telaCadastro #form #container #senha p {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-blue-cart);
+
+    padding: 1%;
+    width: 98%;
+    height: auto;
+
+}
+
+#container section #telaCadastro #form #container #senha p b {
+    color: var(--mandatory-red);
+
+    font-size: 16px;
+    font-weight: 400;
+
+}
+
+#container section #telaCadastro #form #container #senha input {
+    padding: 3%;
+    width: 94%;
+    height: auto;
+
+    border: none;
+
+    font-size: 14px;
+    font-weight: 100;
+    color: var(--text-black);
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+
+    transition: background-color, .2s;
+
+    border-radius: 10px;
+
+}
+
+#container section #telaCadastro #form #container #senha #invalido {
+    border: 2px solid var(--mandatory-input);
+
+}
+
+#container section #telaCadastro #form #container #senha #textoFeedback {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+}
+
+#container section #telaCadastro #form #container #senha .feedback {
+    font-size: 14px;
+    font-weight: 600;
+
+    color: var(--mandatory-input);
+
+}
+
+#container section #telaCadastro #form #container #senha .none {
+    display: none;
+
+}
+
+#container section #telaCadastro #form #container #img {
+    padding: 2%;
+    width: 96%;
+    height: auto;
+
+    /*background-color: darkblue;*/
+
+}
+
+#container section #telaCadastro #form #container #img p {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-blue-cart);
+
+    padding: 1%;
+    width: 98%;
+    height: auto;
+
+}
+
+#container section #telaCadastro #form #container #img input {
+    padding: 3%;
+    width: 94%;
+    height: auto;
+
+    border: none;
+
+    font-size: 14px;
+    font-weight: 100;
+    color: var(--text-black);
+
+    transition: background-color, .2s;
+
+}
+
+/* BOTOES */
+
+#container section #telaCadastro #form #container #botoes {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#container section #telaCadastro #form #container #botoes #avancar {
+    margin: 1%;
+
+    width: 58%;
+    height: auto;
+
+    background-color: var(--text-light-orange); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-orange) , var(--text-orange));
+
+    border-radius: 10px;
+
+}
+
+#container section #telaCadastro #form #container #botoes #avancar button {
+    width: 100%;
+    height: auto;
+
+    background-color: var(--text-light-orange); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-orange) , var(--text-orange));
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+    
+    border-radius: 10px;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+}
+
+#container section #telaCadastro #form #container #botoes #avancar button #icon {
+    padding: 3%;
+
+    width: 12%;
+    height: auto;
+
+    background-color: var(--text-light-blue-cart); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-blue-cart) , var(--text-blue-cart));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px 0px 0px 10px;
+
+}
+
+#container section #telaCadastro #form #container #botoes #avancar button #icon svg {
+    width: 100%;
+    height: auto;
+
+    color: var(--text-white);
+
+}
+
+#container section #telaCadastro #form #container #botoes #avancar button p {
+    padding: 3%;
+
+    width: 82%;
+    height: auto;
+    
+    background-color: var(--text-light-orange); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-orange) , var(--text-orange));
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: var(--text-white);
+
+    text-transform: uppercase;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0px 10px 10px 0px;
+
+}
+
+#container section #telaCadastro #form #container #botoes #login {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+    text-align: right;
+
+}
+
+#container section #telaCadastro #form #container #botoes #login a {
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    color: var(--text-black);
+
+}
+
+/*MODAL - CADASTRO / LOGIN*/
+#container .modal {
+    display: none; /* Hidden by default */
+    
+    position: fixed; /* Stay in place */
+    
+    z-index: 1; /* Sit on top */
+    
+    padding-top: 50px; /* Location of the box */
+    
+    left: 0;
+    top: 0;
+    
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    
+    overflow: auto; /* Enable scroll if needed */
+    
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: var(--box-smooth-shadown); /* Black w/ opacity */
+
+}
+
+/* Modal Content */
+#container .modal .modal-content {
+    position: relative;
+    
+    background-color: var(--background-body);
+    /* background-image: url(../img/backgroundExibir.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%; */
+    
+    margin: auto;
+    padding: 0;
+    
+    width: 80%;
+    height: auto;
+
+    border-radius: 15px 15px 15px 15px;
+    
+    box-shadow: 0px 3px 5px -1px var(--box-shadown);
+    
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top:-300px; 
+        opacity:0;
+    
+    } 
+    to {
+        top:0; 
+        opacity:1;
+    
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top:-300px; 
+        opacity:0;
+    
+    }
+    to {
+        top:0; 
+        opacity:1;
+    
+    }
+}
+
+/* The Close Button */
+#container .modal .modal-content .modal-header .close {
+    color: var(--text-white);
+
+    float: right;
+
+    font-size: 28px;
+    font-weight: bold;
+
+}
+
+#container .modal .modal-content .modal-header .close:hover, .close:focus {
+    color: var(--text-gray);
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: color, .5s;
+}
+
+#container .modal .modal-content .modal-header {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+    background-color: var(--text-light-blue-cart); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-blue-cart) , var(--text-blue-cart));
+
+    color: var(--text-white);
+
+    font-size: 20px;
+    font-weight: 700;
+
+    border-radius: 15px 15px 0px 0px;
+
+}
+
+/*CADASTRO / LOGIN - PERSON - MODAL*/
+#container .modal .modal-content section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+
+    /* background-color: aqua; */
+
+}
+
+#container .modal .modal-content section hr {
+    width: 0%;
+    height: 50vh;
+
+    background-color: var(--text-purple);
+
+    border: 1px solid var(--text-purple);
+
+}
+
+#container .modal .modal-content section #telaCadastro {
+    padding: 1%;
+
+    width: 48%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* background-color: aquamarine; */
+
+}
+
+#container .modal .modal-content section #telaCadastro #logo {
+    width: 20%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#container .modal .modal-content section #telaCadastro #logo p {
+    width: 100%;
+    height: auto;
+
+    text-align: center;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    color: var(--text-purple);
+
+}
+
+#container .modal .modal-content section #telaCadastro #logo #imagem {
+    width: 70%;
+    height: auto;
+
+}
+
+#container .modal .modal-content section #telaCadastro #logo #imagem img {
+    width: 100%;
+    height: auto;
+
+}
+
+#container .modal .modal-content section #telaCadastro #form {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+}
+
+#container .modal .modal-content section #telaCadastro #form h1 {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    color: var(--text-blue-cart);
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container {
+    padding: 5%;
+
+    width: 90%;
+    height: auto;
+
+    /* background-color: var(--background-header); */
+
+    border-radius: 10px;
+
+    /* background-image: url(../img/backgroundExibir.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200%; */
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container #dados {
+    padding: 2%;
+    width: 96%;
+    height: auto;
+
+    /*background-color: darkblue;*/
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container #dados p {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-blue-cart);
+
+    padding: 1%;
+    width: 98%;
+    height: auto;
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container #dados #perfil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px 10px 10px 10px;
+
+    width: 100%;
+    height: auto;
+
+    /* box-shadow: 0px 3px 5px -5px var(--box-shadown); */
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container #dados #perfil p {
+    padding: 2%;
+    width: 96%;
+    height: auto;
+
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-black);
+
+    transition: background-color, .5s;
+
+    border-radius: 10px 0px 0px 10px;
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container #dados #perfil a {
+    width: 10%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container #dados #perfil a #icon {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container #dados #perfil a #icon svg {
+    padding: 20%;
+
+    width: 60%;
+    height: auto;
+
+    background-color: var(--text-light-blue-cart); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-blue-cart) , var(--text-blue-cart));
+
+    color: var(--text-white);
+
+    border-radius: 10px 10px 10px 10px;
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container #email {
+    padding: 2%;
+    width: 96%;
+    height: auto;
+
+    /*background-color: darkblue;*/
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container #email p {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-blue-cart);
+
+    padding: 1%;
+    width: 98%;
+    height: auto;
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container #email input {
+    padding: 3%;
+    width: 94%;
+    height: auto;
+
+    border: none;
+
+    font-size: 14px;
+    font-weight: 100;
+    color: var(--text-black);
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+
+    transition: background-color, .5s;
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container #senha {
+    padding: 2%;
+    width: 96%;
+    height: auto;
+
+    /*background-color: darkblue;*/
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container #senha p {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-blue-cart);
+
+    padding: 1%;
+    width: 98%;
+    height: auto;
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container #senha input {
+    padding: 3%;
+    width: 94%;
+    height: auto;
+
+    border: none;
+
+    font-size: 14px;
+    font-weight: 100;
+    color: var(--text-black);
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+
+    transition: background-color, .2s;
+
+}
+
+/*BOTAO*/
+#container .modal .modal-content section #telaCadastro #form #container #botoes {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container #botoes #avancar {
+    margin: 1%;
+
+    width: 58%;
+    height: auto;
+
+    background-color: var(--text-light-orange); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-orange) , var(--text-orange));
+
+    border-radius: 10px;
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container #botoes #avancar a {
+    text-decoration: none;
+    
+    width: 100%;
+    height: auto;
+
+    background-color: var(--text-light-orange); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-orange) , var(--text-orange));
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+    
+    border-radius: 10px;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container #botoes #avancar a #icon {
+    padding: 3%;
+
+    width: 10%;
+    height: auto;
+
+    background-color: var(--text-light-blue-cart); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-blue-cart) , var(--text-blue-cart));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px 0px 0px 10px;
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container #botoes #avancar a #icon svg {
+    width: 100%;
+    height: auto;
+
+    color: var(--text-white);
+
+}
+
+#container .modal .modal-content section #telaCadastro #form #container #botoes #avancar a p {
+    padding: 3%;
+
+    width: 84%;
+    height: auto;
+    
+    background-color: var(--text-light-orange); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-orange) , var(--text-orange));
+
+    font-size: 20px;
+    font-weight: 600;
+
+    color: var(--text-white);
+
+    text-transform: uppercase;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0px 10px 10px 0px;
+
+}
+
+/*MODAL PERFIL NAO LOGADO*/
+#container .modal .modal-content section #telaCadastro #perfilSistema {
+    padding: 10%;
+
+    width: 80%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    /* background-color: aquamarine; */
+
+}
+
+#container .modal .modal-content section #telaCadastro #perfilSistema #img {
+    padding: 2%;
+    margin: 5%;
+
+    width: 46%;
+    height: auto;
+
+    /* background-color: #0d9d10; */
+
+}
+
+#container .modal .modal-content section #telaCadastro #perfilSistema #img svg {
+    width: 100%;
+    height: auto;
+
+}
+
+#container .modal .modal-content section #telaCadastro #perfilSistema #botoesPerfil {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* background-color: aquamarine; */
+
+}
+
+#container .modal .modal-content section #telaCadastro #perfilSistema #botoesPerfil #botoes {
+    width: 50%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    /* background-color: #07a4dc; */
+
+}
+
+#container .modal .modal-content section #telaCadastro #perfilSistema #botoesPerfil #botoes #avancar {
+    margin: 1%;
+
+    width: 78%;
+    height: auto;
+
+    background-color: var(--text-light-orange); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-orange) , var(--text-orange));
+
+    border-radius: 10px;
+
+}
+
+#container .modal .modal-content section #telaCadastro #perfilSistema #botoesPerfil #botoes #avancar a {
+    text-decoration: none;
+
+    width: 100%;
+    height: auto;
+
+    background-color: var(--text-light-orange); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-orange) , var(--text-orange));
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+    
+    border-radius: 10px;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+}
+
+#container .modal .modal-content section #telaCadastro #perfilSistema #botoesPerfil #botoes #avancar a #icon {
+    padding: 3%;
+
+    width: 12%;
+    height: auto;
+
+    background-color: var(--text-light-blue-cart); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-blue-cart) , var(--text-blue-cart));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px 0px 0px 10px;
+
+}
+
+#container .modal .modal-content section #telaCadastro #perfilSistema #botoesPerfil #botoes #avancar a #icon svg {
+    width: 100%;
+    height: auto;
+
+    color: var(--text-white);
+
+}
+
+#container .modal .modal-content section #telaCadastro #perfilSistema #botoesPerfil #botoes #avancar a p {
+    padding: 3%;
+
+    width: 82%;
+    height: auto;
+    
+    background-color: var(--text-light-orange); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-orange) , var(--text-orange));
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: var(--text-white);
+
+    text-transform: uppercase;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0px 10px 10px 0px;
+
+}
+
+#container .modal .modal-content section #telaCadastro #perfilSistema #botoesPerfil #botoes #login {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+    text-align: right;
+
+}
+
+#container .modal .modal-content section #telaCadastro #perfilSistema #botoesPerfil #botoes #login a {
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    color: var(--text-black);
+
+}
+
+/*SECTION - EXIBIR*/
+#container section #exibir {
+    width: 100%;
+    height: auto;
+
+    /* background-color: turquoise; */
+
+    /* background-image: url(../img/backgroundExibir.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%; */
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#container section #exibir #produto {
+    padding: 1%;
+
+    width: 68%;
+    height: auto;
+
+    /* background-color: violet; */
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#container section #exibir #produto #informacao {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    background-image: url(../img/backgroundExibir.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #exibir #produto #informacao h1 {
+    font-size: 20px;
+    font-weight: 700;
+
+    color: var(--text-white);
+
+}
+
+#container section #exibir #produto #informacao b {
+    font-size: 20px;
+    font-weight: 700;
+
+    color: var(--text-blue-light);
+
+}
+
+#container section #exibir #produto #exibirProduto {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#container section #exibir #produto #exibirProduto #nome {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    color: var(--text-blue);
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto {
+    padding: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+    width: 98%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto {
+    width: 59%;
+    height: auto;
+
+    /* border: 1px solid var(--text-light-gray);
+    border-radius: 10px;
+
+    background-color: var(--background-body); */
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto #dadosImg {
+    padding: 2%;
+    margin: 1%;
+
+    width: 94%;
+    height: auto;
+
+    border: 1px solid var(--text-light-gray);
+    border-radius: 10px;
+
+    background-color: var(--background-body);
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto #dadosImg #hr {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto #dadosImg #hr hr {
+    width: 90%;
+    height: auto;
+
+    border-top: 1px solid var(--text-light-gray);
+    border-bottom: 0px solid var(--text-light-gray);
+    border-left: 0px solid var(--text-light-gray);
+    border-right: 0px solid var(--text-light-gray);
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto #dadosImg #marcaProduto {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* background-color: wheat; */
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto #dadosImg #marcaProduto p {
+    width: 50%;
+    height: auto;
+
+    /* background-color: yellow; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto #dadosImg #marcaProduto p img {
+    padding: 5%;
+
+    width: 40%;
+    height: auto;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto #dadosImg #img {
+    padding: 0% 5% 0% 5%;
+
+    width: 90%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto #dadosImg #img img {
+    width: 80%;
+    height: auto;
+
+    border-radius: 10px;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto #dadosImg #nome {
+    padding: 2% 2% 2% 0%;
+
+    width: 96%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto #dadosImg #nome p {
+    width: 70%;
+    height: auto;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    color: var(--text-blue);
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto #descricao {
+    padding: 2%;
+    margin: 1%;
+
+    width: 94%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    border: 1px solid var(--text-light-gray);
+    border-radius: 10px;
+
+    background-color: var(--background-body);
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto #descricao h1 {
+    padding: 1%;
+
+    width: 78%;
+    height: auto;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    color: var(--text-orange);
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto #descricao p {
+    padding: 1%;
+
+    width: 78%;
+    height: auto;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    color: var(--text-black);
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto #descricao #hr {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #dadosProduto #descricao #hr hr {
+    width: 90%;
+    height: auto;
+
+    border-top: 1px solid var(--text-light-gray);
+    border-bottom: 0px solid var(--text-light-gray);
+    border-left: 0px solid var(--text-light-gray);
+    border-right: 0px solid var(--text-light-gray);
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #precoProduto {
+    width: 39%;
+    height: auto;
+
+    border: 1px solid var(--text-light-gray);
+    border-radius: 10px;
+
+    background-color: var(--background-body);
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #precoProduto #desenvolvedor {
+    padding: 3%;
+
+    width: 94%;
+    height: 5vh;
+
+    background-color: var(--text-light-orange); /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, var(--text-light-orange) , var(--text-orange));
+
+    border-radius: 10px 10px 0px 0px;
+
+    text-transform: uppercase;
+
+    font-size: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #precoProduto #desenvolvedor p {
+    color: var(--text-white);
+
+    text-transform: uppercase;
+
+    font-size: 10px;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #precoProduto #disponibilidade {
+    padding: 3%;
+    margin: 2%;
+
+    width: 90%;
+    height: auto;
+
+    background-color: var(--background-body);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #precoProduto #disponibilidade p {
+    color: var(--text-gray);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #precoProduto #disponibilidade h2 {
+    color: var(--text-light-green);
+
+    font-size: 12px;
+    font-weight: 700;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #precoProduto #hr {
+    margin-bottom: 5%;
+    margin-top: 5%;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #precoProduto #hr hr{
+    width: 60%;
+    height: auto;
+
+    border-top: 1px solid var(--text-light-gray);
+    border-bottom: 0px solid var(--text-light-gray);
+    border-left: 0px solid var(--text-light-gray);
+    border-right: 0px solid var(--text-light-gray);
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #botoes {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    /* background-color: turquoise; */
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #botoes #comprar {
+    margin: 1%;
+
+    width: 58%;
+    height: auto;
+
+    background-color: var(--text-light-orange); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-orange) , var(--text-orange));
+
+    border-radius: 10px;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #botoes #comprar a {
+    text-decoration: none;
+
+    width: 100%;
+    height: auto;
+
+    /* background-color: violet; */
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+    
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #botoes #comprar a #icon {
+    padding: 3%;
+
+    width: 14%;
+    height: auto;
+
+    background-color: var(--text-light-blue-cart); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-blue-cart) , var(--text-blue-cart));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px 0px 0px 10px;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #botoes #comprar a #icon svg {
+    width: 100%;
+    height: auto;
+
+    color: var(--text-white);
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #botoes #comprar a p {
+    padding: 3%;
+
+    width: 74%;
+    height: auto;
+    
+    background-color: var(--text-light-orange); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-orange) , var(--text-orange));
+
+    font-size: 22px;
+    font-weight: 700;
+
+    color: var(--text-white);
+
+    text-transform: uppercase;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0px 10px 10px 0px;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #precoProduto #botoes #listaDesejos {
+    margin: 1%;
+
+    width: 58%;
+    height: auto;
+
+    background-color: var(--text-light-white); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-white) , var(--text-dark-white));
+
+    border-radius: 10px;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #precoProduto #botoes #listaDesejos a {
+    text-decoration: none;
+
+    width: 100%;
+    height: auto;
+
+    /* background-color: violet; */
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+    
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #precoProduto #botoes #listaDesejos a #icon {
+    width: 12%;
+    height: auto;
+
+    background-color: var(--text-light-blue-cart); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-blue-cart) , var(--text-blue-cart));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px 0px 0px 5px;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #precoProduto #botoes #listaDesejos a #icon svg {
+    padding: 10%;
+
+    width: 80%;
+    height: auto;
+
+    color: var(--text-white);
+
+    border-radius: 5px 0px 0px 5px;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #precoProduto #botoes #listaDesejos a p {
+    width: 88%;
+    height: auto;
+    
+    font-size: 14px;
+    font-weight: 500;
+
+    color: var(--text-blue);
+
+    text-transform: uppercase;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0px 5px 5px 0px;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #precoProduto #hr2 {
+    margin-top: 5%;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #precoProduto #hr2 hr{
+    width: 100%;
+    height: auto;
+
+    border-top: 1px solid var(--text-gray);
+    border-bottom: 0px solid var(--text-gray);
+    border-left: 0px solid var(--text-gray);
+    border-right: 0px solid var(--text-gray);
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #precoProduto #preco {
+    padding: 3%;
+
+    width: 94%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: var(--background-header);
+
+    border-radius: 0px 0px 10px 10px;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #precoProduto #preco p {
+    width: 100%;
+    height: auto;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    color: var(--text-green);
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #precoProduto #preco p b {
+    font-size: 14px;
+    font-weight: 500;
+
+    color: var(--text-black);
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #precoProduto #preco #valor {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #precoProduto #preco #valor p {
+    width: 20%;
+    height: auto;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    color: var(--text-green);
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #precoProduto #preco #valor h2 {
+    width: 30%;
+    height: auto;
+    font-size: 22px;
+    font-weight: 600;
+
+    color: var(--text-green);
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #precoProduto #preco #parcelas {
+    flex-wrap: wrap;
+
+    padding: 1%;
+
+    min-width: 98%;
+    max-width: 98%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #precoProduto #preco #parcelas p {
+    padding: 1%;
+
+    min-width: 48%;
+    max-width: 48%;
+    height: auto;
+
+    flex: 1;
+
+    color: var(--text-black);
+
+}
+
+/*POSTS - HOME*/
+
+#container section #posts {
+    padding: 2%;
+    margin: 1%;
+
+    width: 74%;
+    height: 50vh;
+
+    /* background-color: #1aa21d; */
+
+    overflow-y: scroll;
+
+}
+
+#container section #posts #mensagem {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* background-color: #de1616; */
+
+}
+
+#container section #posts #mensagem #post {
+    padding: 1%;
+
+    width: 94%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#container section #posts #mensagem #post #autorPost {
+    padding: 1%;
+    margin-bottom: 0.5%;
+
+    width: 98%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#container section #posts #mensagem #post #autorPost #icon {
+    width: 1.5%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #posts #mensagem #post #autorPost #icon svg {
+    width: 100%;
+    height: auto;
+
+    color: var(--text-light-blue-cart);
+
+}
+
+#container section #posts #mensagem #post #autorPost h1 {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    color: var(--text-black);
+
+    font-size: 14px;
+    font-weight: 700;
+    
+    text-align: left;
+
+}
+
+#container section #posts #mensagem #post #autorPost h1 p {
+    color: var(--text-light-gray2);
+
+    font-size: 12px;
+    font-weight: 500;
+
+}
+
+#container section #posts #mensagem #post #autorPost h1 #texto {
+    margin-top: 1%;
+
+    color: var(--text-black);
+
+    font-size: 12px;
+    font-weight: 500;
+
+}
+
+#container section #posts #mensagem #post #autorPost #avancar {
+    width: 2%;
+    height: auto;
+
+    background-color: var(--text-light-orange);
+    background-image: linear-gradient(var(--text-light-orange) , var(--text-orange));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #posts #mensagem #post #autorPost #avancar a {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+}
+
+#container section #posts #mensagem #post #autorPost #avancar a svg {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--text-black);
+}
+
+/*POST - VER DADO SEPARADO*/
+
+#container section #mensagem {
+    padding: 2%;
+    margin: 1%;
+
+    width: 74%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    /* background-color: #de1616; */
+
+    overflow-y: scroll;
+
+}
+
+#container section #mensagem #autor {
+    padding: 1%;
+    margin-bottom: 0.5%;
+
+    width: 98%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--text-light-orange); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-orange) , var(--text-orange));
+
+    border: 1px solid var(--text-dark-white);
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+
+    border-radius: 15px 15px 0px 0px;
+
+}
+
+#container section #mensagem #autor #email {
+    padding: 1%;
+
+    width: 78%;
+    height: auto;
+
+    color: var(--text-white);
+
+    font-size: 14px;
+    font-weight: 400;
+
+}
+
+#container section #mensagem #autor #data {
+    padding: 1%;
+
+    width: 18%;
+    height: auto;
+
+    color: var(--text-dark-white);
+
+    font-size: 14px;
+    font-weight: 400;
+
+    text-align: right;
+
+}
+
+#container section #mensagem #conteudo {
+    padding: 1%;
+    margin-bottom: 1.5%;
+
+    width: 98%;
+    height: auto;
+
+    background-color: var(--background-body);
+
+    border: 1px solid var(--text-dark-white);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+
+    border-radius: 0px 0px 15px 15px;
+
+}
+
+#container section #mensagem #conteudo #titulo {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    color: var(--text-black);
+
+    font-size: 14px;
+    font-weight: 400;
+
+}
+
+#container section #mensagem #conteudo #texto {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    color: var(--text-black);
+
+    font-size: 14px;
+    font-weight: 400;
+
+}
+
+#container section #mensagem #conteudo #avancar {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    text-align: right;
+
+}
+
+#container section #mensagem #conteudo #avancar a {
+    text-decoration: none;
+
+    width: 10%;
+    height: auto;
+
+    text-align: right;
+
+}
+
+#container section #mensagem #conteudo #avancar a svg {
+    color: var(--text-black);
+
+    width: 2%;
+    height: auto;
+
+}
+
+#container section #mensagem #botao {
+    width: 100%;
+    height: auto;
+
+}
+
+#container section #mensagem #botao a {
+    padding: 1%;
+    margin: 1%;
+
+    width: 11%;
+    height: auto;
+
+    background-color: var(--text-light-orange); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-orange) , var(--text-orange));
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+
+    border-radius: 5px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: var(--text-white);
+
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+}
