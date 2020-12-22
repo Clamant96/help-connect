@@ -1,7 +1,7 @@
 # HELP CONNECT
 Desenvolvendo sistema para conclusão de semestre, matéria Desenvolvimento De Software Para Web 
 
-![GitHub Logo](img/render_help-connect.png)
+![GitHub Logo](public/img/render_help-connect.png)
 
 ## PASSOS DE DESENVOLVIMENTO DO SISTEMA
 
