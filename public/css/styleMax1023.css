@@ -601,11 +601,13 @@ html, body {
 #container section #produtos #card {
     padding: 1%;
 
-    min-width: 48%;
-    max-width: 48%;
+    min-width: 46%;
+    max-width: 46%;
     height: auto;
 
     flex: 1;
+
+    /* background-color: aquamarine; */
 
 }
 
@@ -622,44 +624,43 @@ html, body {
 }
 
 #container section #produtos #card #produto {
-    padding: 2%;
-
-    width: 96%;
-    height: auto;
-
-    /* background-color: aquamarine; */
-
-}
-
-#container section #produtos #card #produto h1 {
     width: 100%;
     height: auto;
 
-    font-size: 20px;
-    font-weight: 800;
-
-    color: var(--text-black);
-
-    text-transform: uppercase;
-
-    /* background-color: blueviolet; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 
 }
 
-#container section #produtos #card #produto p {
-    width: 100%;
+#container section #produtos #card #produto #h1 {
+    padding: 1%;
+
+    width: 88%;
     height: auto;
 
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: 700;
+
+    color: var(--text-blue);
+
+}
+
+#container section #produtos #card #produto #p {
+    padding: 1%;
+
+    width: 88%;
+    height: auto;
+
+    font-size: 12px;
     font-weight: 400;
 
-    color: var(--text-black);
-
-    /* background-color: blueviolet; */
+    color: var(--text-gray);
 
 }
 
-#container section #produtos #card #produto h2 {
+/*#container section #produtos #card #produto h2 {
     width: 100%;
     height: auto;
 
@@ -671,9 +672,312 @@ html, body {
     text-transform: uppercase;
     text-align: right;
 
-    /* background-color: blueviolet; */
+}*/
+
+/*BOTOES CARD*/
+
+#container section #produtos #card #produto #botoes {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    /* background-color: turquoise; */
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    cursor: pointer;
 
 }
+
+#container section #produtos #card #produto #botoes #h2 {
+    padding: 1%;
+
+    width: 78%;
+    height: auto;
+
+    font-size: 25px;
+    font-weight: 700;
+
+    text-align: right;
+
+    color: var(--text-blue);
+
+ }
+
+#container section #produtos #card #produto #botoes #p {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    font-size: 10px;
+    font-weight: 400;
+
+    color: var(--text-gray);
+
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+#container section #produtos #card #produto #botoes #comprar {
+    margin: 1%;
+
+    width: 58%;
+    height: auto;
+
+    background-color: var(--text-light-orange); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-orange) , var(--text-orange));
+
+    border-radius: 5px;
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);    
+
+}
+
+#container section #produtos #card #produto #botoes #comprar a {
+    text-decoration: none;
+
+    width: 100%;
+    height: auto;
+
+    /* background-color: violet; */
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+    
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #produtos #card #produto #botoes #comprar a #icon {
+    padding: 3%;
+
+    width: 14%;
+    height: auto;
+
+    background-color: var(--text-light-blue-cart); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-blue-cart) , var(--text-blue-cart));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px 0px 0px 5px;
+
+}
+
+#container section #produtos #card #produto #botoes #comprar a #icon svg {
+    width: 100%;
+    height: auto;
+
+    color: var(--text-white);
+
+}
+
+#container section #produtos #card #produto #botoes #comprar a p {
+    padding: 3%;
+
+    width: 74%;
+    height: auto;
+    
+    font-size: 16px;
+    font-weight: 700;
+
+    color: var(--text-white);
+
+    text-transform: uppercase;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0px 10px 10px 0px;
+
+}
+
+#container section #produtos #card #produto #botoes #listaDesejos {
+    margin: 1%;
+
+    width: 58%;
+    height: auto;
+
+    background-color: var(--text-light-orange); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-orange) , var(--text-orange));
+
+    border-radius: 5px;
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+
+}
+
+#container section #produtos #card #produto #botoes #listaDesejos a {
+    text-decoration: none;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #produtos #card #produto #botoes #listaDesejos a #icon {
+    width: 14%;
+    height: auto;
+
+    background-color: var(--text-light-orange-plus); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-orange-plus) , var(--text-orange-plus));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px 0px 0px 5px;
+
+}
+
+#container section #produtos #card #produto #botoes #listaDesejos a #icon svg {
+    padding: 5%;
+
+    width: 90%;
+    height: auto;
+
+    color: var(--text-white);
+
+    border-radius: 5px 0px 0px 5px;
+
+}
+
+#container section #produtos #card #produto #botoes #listaDesejos a p {
+    width: 86%;
+    height: auto;
+    
+    font-size: 14px;
+    font-weight: 600;
+
+    color: var(--text-white);
+
+    text-transform: uppercase;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0px 5px 5px 0px;
+
+}
+
+#container section #produtos #card #produto #botoes #juros {
+    margin-bottom: 5%;
+
+    width: 80%;
+    height: auto;
+
+    background-color: var(--text-light-white); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-white) , var(--text-dark-white));
+
+    border-radius: 0px 0px 5px 5px;
+
+}
+
+#container section #produtos #card #produto #botoes #juros p {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    color: var(--text-gray);
+
+    text-transform: uppercase;
+
+    text-align: right;
+
+}
+
+#container section #produtos #card #produto #botoes #juros #parcelas {
+    width: 100%;
+    height: auto;
+
+    background-color: var(--text-blue-light); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-blue-light) , var(--text-blue));
+
+    border-radius: 5px;
+
+    box-shadow: 0px 3px 5px -3px var(--box-shadown);
+
+}
+
+#container section #produtos #card #produto #botoes #juros #parcelas a {
+    text-decoration: none;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #produtos #card #produto #botoes #juros #parcelas a #pagamento {
+    padding: 2%;
+
+    width: 20%;
+    height: auto;
+
+    background-color: var(--text-light-blue-cart); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-blue-cart) , var(--text-blue-cart));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px 0px 0px 5px;
+
+    font-size: 25px;
+    font-weight: 700;
+
+    color: var(--text-yellow);
+
+    text-transform: uppercase;
+
+}
+
+#container section #produtos #card #produto #botoes #juros #parcelas a p {
+    width: 76%;
+    height: auto;
+    
+    font-size: 25px;
+    font-weight: 700;
+
+    color: var(--text-white);
+
+    text-transform: uppercase;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0px 5px 5px 0px;
+
+}
+
+/*-------------*/
 
 /*CARD COLLAPSIBLE*/
 .collapsible {
@@ -3827,9 +4131,7 @@ html, body {
 }
 
 #container section #exibir #produto #exibirProduto #conteudoProduto #precoProduto #preco {
-    padding: 3%;
-
-    width: 94%;
+    width: 100%;
     height: auto;
 
     display: flex;
@@ -3862,7 +4164,125 @@ html, body {
 
 }
 
-#container section #exibir #produto #exibirProduto #conteudoProduto #precoProduto #preco #valor {
+/*BOTAO PARCELAS*/
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #botaoParcelas {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    background-color: var(--background-header);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #botaoParcelas #juros {
+    margin: 2%;
+
+    width: 76%;
+    height: auto;
+
+    background-color: var(--text-light-white); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-white) , var(--text-dark-white));
+
+    border-radius: 0px 0px 5px 5px;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #botaoParcelas #juros p {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    color: var(--text-gray);
+
+    text-transform: uppercase;
+
+    text-align: right;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #botaoParcelas #juros #parcelas {
+    width: 100%;
+    height: auto;
+
+    background-color: var(--text-blue-light); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-blue-light) , var(--text-blue));
+
+    border-radius: 5px;
+
+    box-shadow: 0px 3px 5px -3px var(--box-shadown);
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #botaoParcelas #juros #parcelas a {
+    text-decoration: none;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #botaoParcelas #juros #parcelas a #pagamento {
+    padding: 2%;
+
+    width: 20%;
+    height: auto;
+
+    background-color: var(--text-light-blue-cart); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-blue-cart) , var(--text-blue-cart));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px 0px 0px 5px;
+
+    font-size: 25px;
+    font-weight: 700;
+
+    color: var(--text-yellow);
+
+    text-transform: uppercase;
+
+}
+
+#container section #exibir #produto #exibirProduto #conteudoProduto #botaoParcelas #juros #parcelas a p {
+    width: 76%;
+    height: auto;
+    
+    font-size: 25px;
+    font-weight: 700;
+
+    color: var(--text-white);
+
+    text-transform: uppercase;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0px 5px 5px 0px;
+
+}
+
+/*--------------*/
+
+/*#container section #exibir #produto #exibirProduto #conteudoProduto #precoProduto #preco #valor {
     width: 100%;
     height: auto;
 
@@ -3892,7 +4312,7 @@ html, body {
 
     color: var(--text-green);
 
-}
+}*/
 
 #container section #exibir #produto #exibirProduto #conteudoProduto #precoProduto #preco #parcelas {
     flex-wrap: wrap;
@@ -3936,6 +4356,160 @@ html, body {
     overflow-y: scroll;
 
 }
+
+/*MENU - MENSAGEM*/
+
+#container section #posts #editarPost {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    /* background-color: #07a4dc; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #posts #editarPost ul {
+    padding: 1%;
+
+    width: 88%;
+    height: auto;
+
+}
+
+#container section #posts #editarPost ul a {
+    text-decoration: none;
+
+}
+
+#container section #posts #editarPost ul a li {
+    font-size: 16px;
+    font-weight: 600;
+
+    color: var(--text-black);
+
+    list-style: none;
+
+    display: inline;
+
+}
+
+#container section #posts #editarPost ul li {
+    font-size: 14px;
+    font-weight: 500;
+
+    color: var(--text-black);
+
+    list-style: none;
+
+    display: inline;
+
+}
+
+#container section #posts #botoes {
+    padding: 1%;
+    margin-left: 5%;
+
+    width: 16%;
+    height: auto;
+
+    /* background-color: turquoise; */
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    cursor: pointer;
+
+}
+
+#container section #posts #botoes #comprar {
+    margin: 1%;
+
+    width: 98%;
+    height: auto;
+
+    background-color: var(--text-light-orange); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-orange) , var(--text-orange));
+
+    border-radius: 10px;
+
+}
+
+#container section #posts #botoes #comprar a {
+    text-decoration: none;
+
+    width: 100%;
+    height: auto;
+
+    /* background-color: violet; */
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+    
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #posts #botoes #comprar a #icon {
+    padding: 3%;
+
+    width: 14%;
+    height: auto;
+
+    background-color: var(--text-light-blue-cart); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-blue-cart) , var(--text-blue-cart));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px 0px 0px 10px;
+
+}
+
+#container section #posts #botoes #comprar a #icon svg {
+    width: 100%;
+    height: auto;
+
+    color: var(--text-white);
+
+}
+
+#container section #posts #botoes #comprar a p {
+    padding: 3%;
+
+    width: 74%;
+    height: auto;
+    
+    background-color: var(--text-light-orange); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-orange) , var(--text-orange));
+
+    font-size: 16px;
+    font-weight: 700;
+
+    color: var(--text-white);
+
+    text-transform: uppercase;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0px 10px 10px 0px;
+
+}
+
+/*------------*/
 
 #container section #posts #mensagem {
     padding: 1%;

@@ -34,10 +34,14 @@ class Posts extends Controller {
 
                 if(empty($formulario['titulo'])):
                     $dados['preencha_titulo'] = 'Preencha o campo <b>Titulo</b>';
+                else:
+                    $dados['preencha_titulo'] = ''; 
                 endif;
 
                 if(empty($formulario['texto'])):
                     $dados['preencha_texto'] = 'Preencha o campo <b>Texto</b>';
+                else:
+                    $dados['preencha_texto'] = ''; 
                 endif;
 
             else:
@@ -92,17 +96,21 @@ class Posts extends Controller {
 
                 if(empty($formulario['titulo'])):
                     $dados['preencha_titulo'] = 'Preencha o campo <b>Titulo</b>';
+                else:
+                    $dados['preencha_titulo'] = ''; 
                 endif;
 
                 if(empty($formulario['texto'])):
                     $dados['preencha_texto'] = 'Preencha o campo <b>Texto</b>';
+                else:
+                    $dados['preencha_texto'] = ''; 
                 endif;
 
             else:
                 if($this->postModel->atualizar($dados)):
                     Sessao::mensagem('post', 'Mensagem editada com sucesso');
                     //Url::redirecionar('posts/listar'); /*VERIFICAR PARA ONDE ESTA INDO*/
-                    Url::redirecionar('posts');
+                    Url::redirecionar('posts/listar');
 
                 else:
                     die("Erro ao editar a mensagem");
@@ -114,6 +122,12 @@ class Posts extends Controller {
         else:
             $post = $this->postModel->lerPostPorId($id);
             
+            if($post->usuario_id != $_SESSION['usuario_id']):
+                Sessao::mensagem('post', 'Voce nao tem autorizacao para editar essa mensagem');
+                Url::redirecionar('posts/listar');
+
+            endif;
+
             $dados = [
                 'id' => $post->id,
                 'titulo' => $post->titulo,

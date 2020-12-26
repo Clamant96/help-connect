@@ -17,8 +17,8 @@ include './../app/autoload.php';
     <title><?= APP_NOME ?></title>
     <link rel="stylesheet" href="<?=URL?>/public/css/style.css">
     <link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1023px)" href="<?=URL?>/public/css/styleMax1023.css">
-    <link rel="stylesheet" media="screen and (min-width: 361px) and (max-width: 767px)" href="<?=URL?>/public/css/styleMax767.css">
-    <link rel="stylesheet" media="screen and (max-width: 360px)" href="<?=URL?>/public/css/styleMax360.css">
+    <link rel="stylesheet" media="screen and (min-width: 481px) and (max-width: 767px)" href="<?=URL?>/public/css/styleMax767.css">
+    <link rel="stylesheet" media="screen and (max-width: 480px)" href="<?=URL?>/public/css/styleMax360.css">
 
 </head>
 <body>
@@ -29,6 +29,10 @@ include './../app/autoload.php';
             <a href="#"><li>Layouts</li></a>
             <a href="#"><li>Contatos</li></a>
             <a href="<?=URL?>/posts/listar"><li>Mensagem</li></a>
+            <a href="<?=URL?>/produtos/listar"><li>Listar Produtos</li></a>
+            <a href="<?=URL?>/produtos/cadastrar"><li>Cadastrar Produtos</li></a>
+            <!-- <a href="<?= URL.'/usuarios/vizualizarPerfil/'.$_SESSION['usuario_id'] ?>"><li>Gerenciar Conta</li></a> -->
+            <!-- <a href="<?= URL.'/usuarios/vizualizarPerfil/71' ?>"><li>Gerenciar Conta</li></a> -->
             <!-- <?php/*
                 if($situacao == 1) {
                     echo "

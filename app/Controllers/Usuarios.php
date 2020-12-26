@@ -20,18 +20,26 @@ class Usuarios extends Controller {
 
                 if(empty($formulario['nome'])):
                     $dados['preencha_nome'] = 'Preencha o campo <b>Nome</b>';
+                else:
+                    $dados['preencha_nome'] = ''; 
                 endif;
 
                 if(empty($formulario['email'])):
                     $dados['preencha_email'] = 'Preencha o campo <b>E-mail</b>';
+                else:
+                    $dados['preencha_email'] = ''; 
                 endif;
 
                 if(empty($formulario['senha'])):
                     $dados['preencha_senha'] = 'Preencha o campo <b>Senha</b><br>A senha deve ter no minimo 6 caracteres';
+                else:
+                    $dados['preencha_senha'] = ''; 
                 endif;
 
                 if(empty($formulario['confirmar_senha'])):
                     $dados['preencha_confirmar_senha'] = 'Preencha o campo <b>Senha</b>';
+                else:
+                    $dados['preencha_confirmar_senha'] = ''; 
                 endif;
 
             else:
@@ -104,10 +112,14 @@ class Usuarios extends Controller {
 
                 if(empty($formulario['email'])):
                     $dados['preencha_email'] = 'Preencha o campo <b>E-mail</b>';
+                else:
+                    $dados['preencha_email'] = ''; 
                 endif;
 
                 if(empty($formulario['senha'])):
                     $dados['preencha_senha'] = 'Preencha o campo <b>Senha</b><br>A senha deve ter no minimo 6 caracteres';
+                else:
+                    $dados['preencha_senha'] = ''; 
                 endif;
 
             else:
@@ -168,6 +180,24 @@ class Usuarios extends Controller {
 
         Url::redirecionar('usuarios/login');
 
+    }
+
+    public function vizualizarPerfil($id) {
+
+        $dados = [
+            'usuario' => $this->usuarioModel->lerUsuarioPorId($id)
+        ];
+
+        $this->view('usuarios/perfil', $dados);
+    }
+
+    public function vizualizarPedidos($id) {
+
+        $dados = [
+            'usuario' => $this->usuarioModel->lerUsuarioPorId($id)
+        ];
+
+        $this->view('usuarios/pedidos', $dados);
     }
 
 }

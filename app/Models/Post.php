@@ -50,4 +50,19 @@ class Post {
         return $this->db->resultado();
     }
 
+    public function atualizar($dados) {
+        $this->db->query("UPDATE tb_mensagem SET titulo = :titulo, texto = :texto WHERE id = :id");
+        
+        $this->db->bind("id", $dados['id']);
+        $this->db->bind("titulo", $dados['titulo']);
+        $this->db->bind("texto", $dados['texto']);
+
+        if($this->db->executa()):
+            return true;
+        else:
+            return false;
+        endif;
+
+    }
+
 }

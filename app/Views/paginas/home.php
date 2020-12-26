@@ -5,6 +5,18 @@
                 Olá, <b><?= $_SESSION['usuario_nome'] ?></b><br/>
                 <i><?php echo strftime('%A, %d de %B de %Y', strtotime('today')); ?></i>
             </p>
+            <div id="botaoGerenciar">
+                <div id="comprar">
+                    <a href="<?= URL.'/usuarios/vizualizarPerfil/'.$_SESSION['usuario_id'] ?>">
+                        <div id="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                            </svg>
+                        </div>
+                        <p>Gerenciar</p>
+                    </a>
+                </div>
+            </div>
         <?php else: ?>
             <p id="recepcao">
                 Olá, seja bem-vindo. <b><a href="<?=URL?>/usuarios/login">Login</a></b> / <b><a href="<?=URL?>/usuarios/cadastrar">Cadastre-se</a></b><br/>
@@ -33,38 +45,9 @@
 
 <section>
     <div id="produtos">
-        <?php
-            /*foreach($this->view->dados as $indice => $produto) {
-                echo "
-                    <div id=\"card\">
-                        <a href='/exibirProduto?id=" . $produto["id"] . "'>
-                            <div id=\"img\">
-                                <img src=\"img/". $produto["img"] ."\">
-                            </div>
-                        </a>
-
-                        <button class=\"collapsible\">Saiba Mais</button>
-                        <div class=\"content\">
-                            <div id=\"produto\">
-                                <h1 id=\"h1\">"
-                                    . $produto["nome"] .
-                                "</h1>
-                                <p id=\"p\">"
-                                    . $produto["descricao"] .
-                                "</p>
-                                <h2 id=\"h2\">R$ "
-                                    . $produto["preco"] .
-                                "</h2>
-                            </div>
-                        </div>
-                    </div>
-                ";
-            }*/
-        ?>
-
-        <?php foreach($dados['produtos'] as $produto): ?>
+        <!--<?php foreach($dados['produtos'] as $produto): ?>
             <div id="card">
-                <a href="<?= URL.'/produtos/vizualizarProduto/'.$produto->id ?>">
+                <a href="<?= URL.'/produtos/vizualizarProduto/'.$produto->urlProduto ?>">
                     <div id="img">
                         <img src="<?= URL.'/public/img/'.$produto->img ?>" alt="<?=APP_NOME?>">
                     </div>
@@ -79,8 +62,63 @@
                     </div>
                 </div>
             </div>
+        <?php endforeach ?>-->
+        <?php foreach($dados['produtos'] as $produto): ?>
+            <div id="card">
+                <a href="<?= URL.'/produtos/vizualizarProduto/'.$produto->urlProduto ?>">
+                    <div id="img">
+                        <img src="<?= URL.'/public/img/'.$produto->img ?>" alt="<?=APP_NOME?>">
+                    </div>
+                </a>
+                <div id="produto">
+                    <h1 id="h1"><?= $produto->nome ?></h1>
+                    <p id="p"><?= $produto->descricao ?></p>
+                    <!-- <h2 id="h2">R$ <?= $produto->preco ?></h2> -->
+                    <div id="botoes">
+                        <h2 id="h2">R$ <?= $produto->preco ?></h2>
+                        <p id="p">A vista no boleto 15% de desconto</p>
+                        <div id="juros">
+                            <div id="parcelas">
+                                <a>
+                                    <div id="pagamento">
+                                        12x
+                                    </div>
+                                    <p>
+                                        <?php $total = $produto->preco / 12;?>
+                                        <b>
+                                            R$ <?= number_format($total, 2, '.', '') ?>
+                                        </b>
+                                    </p>
+                                </a>
+                            </div>
+                            <p>Sem juros no cartao</p>
+                        </div>
+                    </div>
+                    <div id="botoes">
+                        <div id="comprar">
+                            <a href="<?= URL.'/produtos/vizualizarProduto/'.$produto->urlProduto ?>">
+                                <div id="icon">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart4" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                                    </svg>
+                                </div>
+                                <p>Comprar</p>
+                            </a>
+                        </div>
+                        <div id="listaDesejos">
+                            <a href="#">
+                                <div id="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                    </svg>
+                                </div>
+                                <p>Detalhes</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         <?php endforeach ?>
-
     </div>
 </section>
 
@@ -104,7 +142,7 @@
                         <h1><?= $post->titulo ?>
                             <p id="data">
                                 <?= FormatacaoData::conversorDia($post->postDataCadastro) ?>
-                                por: <?= $post->nome ?>
+                                Escrito por: <?= $post->nome ?>
                             </p>
                         </h1>
                         <div id="avancar">

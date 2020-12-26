@@ -72,24 +72,30 @@
                         <div id="hr2">
                             <hr />
                         </div>
-                        <div id="preco">
-                            <div id="valor">
-                                <h2>
-                                    R$ <?= $dados['produto']->preco ?>
-                                </h2>
-                                <p> à vista</p>
+                        <div id="botaoParcelas">
+                            <div id="juros">
+                                <div id="parcelas">
+                                    <a>
+                                        <div id="pagamento">
+                                            12x
+                                        </div>
+                                        <p>
+                                            <?php $total = $dados['produto']->preco / 12;?>
+                                            <b>
+                                                R$ <?= number_format($total, 2, ',', '') ?>
+                                            </b>
+                                        </p>
+                                    </a>
+                                </div>
                             </div>
-                            <p>ou 12x sem juros no cartão de 
-                                <?php $total = $dados['produto']->preco / 12;?>
-                                <b>
-                                    <?= number_format($total, 2, '.', '') ?>
-                                </b>
-                            </p>
+                            <h1>R$ <?= number_format($dados['produto']->preco, 2, ',', '') ?></h1>
+                        </div>
+                        <div id="preco">
                             <div id="parcelas">
                                 <?php 
                                     for($contador = 1; $contador <= 12; $contador++) {
                                         $total = $dados['produto']->preco / $contador;
-                                        echo "<p>". $contador ." x R$ " . number_format($total, 2, '.', '') ." sem juros </p>";
+                                        echo "<p>". $contador ." x R$ " . number_format($total, 2, ',', '') ." sem juros </p>";
 
                                     }
                                 ?>
