@@ -55,7 +55,7 @@
                 <div id="produto">
                     <h1 id="h1"><?= $produto->nome ?></h1>
                     <p id="p"><?= $produto->descricao ?></p>
-                    <h2 id="h2">R$ <?= $produto->preco ?></h2>
+                    <h2 id="h2">R$ <?= number_format($produto->preco, 2, ',', '') ?></h2>
                     <div id="opcoes">
                         <div id="comprar">
                             <a href="<?= URL.'/produtos/editar/'.$produto->id?>">
@@ -69,7 +69,7 @@
                             </a>
                         </div>
                         <div id="comprar">
-                            <a href="#">
+                            <a href="<?= URL.'/produtos/excluir/'.$produto->id?>">
                                 <div id="icon">
                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>

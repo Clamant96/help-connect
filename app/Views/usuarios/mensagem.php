@@ -50,19 +50,6 @@
                             </a>
                         </div>
                         <div id="comprar">
-                            <a href="<?= URL.'/usuarios/vizualizarMensagem/'.$_SESSION['usuario_id'] ?>">
-                                <div id="icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
-                                        <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>
-                                    </svg>
-                                </div>
-                                <div id="hr">
-                                    <hr />
-                                </div>
-                                <p>Mensagens</p>
-                            </a>
-                        </div>
-                        <div id="comprar">
                             <a href="<?= URL.'/usuarios/excluir/'.$_SESSION['usuario_id'] ?>">
                                 <div id="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-x-fill" viewBox="0 0 16 16">
@@ -100,53 +87,47 @@
                         <h2>Administre seus dados, endereco e pedidos.</h2>
                         <p>Se houver duvidas, entre em contato com nossa central de atendimento</p>
                     </div>
-                    <div id="dadosCadastrais">
-                        <h1>Dados Cadastrais</h1>
-                        <h2>Todos os campos sao obrigatorios</h2>
-                    </div>
                     <div id="painel">
                         <div id="opcao">
-                            <p>Dados Pessoais</p>
+                            <p>Minhas Mensagens</p>
                         </div>
                         <div id="dadosPerfil">
                             <div id="cadastro">
-                                <div id="nome">
-                                    <p>Nome</p>
-                                    <input type="text" name="nome" placeholder="Nome" value="<?=$dados['usuario']->nome?>" />
-                                </div>
-                                <div id="email">
-                                    <p>E-mail</p>
-                                    <input type="text" name="email" placeholder="E-mail" value="<?=$dados['usuario']->email?>" />
-                                </div>
-                                <div id="cpfRg">
-                                    <div id="cpf">
-                                        <p>CPF</p>
-                                        <input type="text" name="email" placeholder="CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" />
-                                    </div>
-                                    <div id="rg">
-                                        <p>RG</p>
-                                        <input type="text" name="email" placeholder="RG" />
-                                    </div>
-                                </div>
-                                <div id="celIdade">
-                                    <div id="cel">
-                                        <p>CEL</p>
-                                        <input type="tel" name="email" placeholder="Cel" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" />
-                                    </div>
-                                    <div id="idade">
-                                        <p>Data Nascimento</p>
-                                        <input type="date" name="email" placeholder="Data Nascimento" />
-                                    </div>
-                                </div>
-                                <div id="senha">
-                                    <p>Senha</p>
-                                    <input type="password" name="senha" placeholder="Senha" value="<?=$dados['usuario']->senha?>" />
-                                </div>
+                                <?php foreach($dados['posts'] as $post): ?>
+                                    <?php if($post->usuarioID == $_SESSION['usuario_id']): ?>
+                                        <div id="mensagem">
+                                            <a href="#" id="linkTitulo">
+                                                <p id="titulo"><?= $post->titulo ?></p>
+                                            </a>
+                                            <div id="botoes">
+                                                <div id="comprar">
+                                                    <a href="#">
+                                                        <div id="icon">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen-fill" viewBox="0 0 16 16">
+                                                                <path d="M13.498.795l.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z"/>
+                                                            </svg>
+                                                        </div>
+                                                        <p>Alterar</p>
+                                                    </a>
+                                                </div>
+                                                <div id="comprar">
+                                                    <a href="#">
+                                                        <div id="icon">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                                            </svg>
+                                                        </div>
+                                                        <p>Excluir</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php endif; ?>
+                                <?php endforeach ?>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- <?php include '../app/Views/usuarios/dadosPessoais.php'; ?> -->
             </div>
         </div>
     </div>

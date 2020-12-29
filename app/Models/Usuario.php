@@ -63,4 +63,23 @@ class Usuario {
         return $this->db->resultado();
     }
 
+    public function excluirConta($id) {
+        $this->db->query("DELETE FROM tb_clientes WHERE id = :id");
+        
+        $this->db->bind("id", $id);
+
+        if($this->db->executa()):
+            return true;
+        else:
+            return false;
+        endif;
+
+    }
+
+    public function listarUsuarios() {
+        $this->db->query("SELECT * FROM tb_clientes");
+        
+        return $this->db->resultados();
+    }
+
 }

@@ -142,5 +142,23 @@ class Posts extends Controller {
 
         $this->view('posts/editar', $dados);
     }
+
+    public function excluir($id) {
+        /*CONVERTENDO VALORES*/
+        //ESSA E UMA FORMA DE VALIDACAO OPCIONAL, EM PRODUTOS ESTA A FORMA PADRAO, NESSA ESTA CONVERTENDO UMA STRING EM INT
+        $id = (int) $id;
+
+        if(is_int($id)):
+            if($this->postModel->excluirMensagem($id)):
+                Sessao::mensagem('post', 'Mensagem excluida com sucesso');
+                Url::redirecionar('posts/listar');
+            else:
+                die("Erro ao excluir a mensagem");
+            endif;
+        endif;
+
+        var_dump($id);
+
+    }
     
 }

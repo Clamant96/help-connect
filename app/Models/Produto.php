@@ -80,4 +80,17 @@ class Produto {
 
     }
 
+    public function excluirProduto($id) {
+        $this->db->query("DELETE FROM tb_produtos WHERE id = :id");
+        
+        $this->db->bind("id", $id);
+
+        if($this->db->executa()):
+            return true;
+        else:
+            return false;
+        endif;
+
+    }
+
 }

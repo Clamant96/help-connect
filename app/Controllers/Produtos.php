@@ -184,4 +184,14 @@ class Produtos extends Controller {
         $this->view('produtos/editarProdutos', $dados);
     }
 
+    public function excluir($id) {
+        if($this->produtoModel->excluirProduto($id)):
+            Sessao::mensagem('produto', 'Produto excluido com sucesso');
+            Url::redirecionar('produtos/listar');
+        else:
+            die("Erro ao excluir o produto");
+        endif;
+
+    }
+
 }

@@ -65,4 +65,17 @@ class Post {
 
     }
 
+    public function excluirMensagem($id) {
+        $this->db->query("DELETE FROM tb_mensagem WHERE id = :id");
+        
+        $this->db->bind("id", $id);
+
+        if($this->db->executa()):
+            return true;
+        else:
+            return false;
+        endif;
+
+    }
+
 }
