@@ -5,7 +5,7 @@
                 Olá, <b><?= $_SESSION['usuario_nome'] ?></b><br/>
                 <i><?php echo strftime('%A, %d de %B de %Y', strtotime('today')); ?></i>
             </p>
-            <div id="botaoGerenciar">
+            <!--<div id="botaoGerenciar">
                 <div id="comprar">
                     <a href="<?= URL.'/usuarios/vizualizarPerfil/'.$_SESSION['usuario_id'] ?>">
                         <div id="icon">
@@ -16,7 +16,7 @@
                         <p>Perfil</p>
                     </a>
                 </div>
-            </div>
+            </div>-->
         <?php else: ?>
             <p id="recepcao">
                 Olá, seja bem-vindo. <b><a href="<?=URL?>/usuarios/login">Login</a></b> / <b><a href="<?=URL?>/usuarios/cadastrar">Cadastre-se</a></b><br/>

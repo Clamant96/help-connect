@@ -36,6 +36,22 @@ class Usuario {
 
     }
 
+    public function atualizar($dados) {
+        $this->db->query("UPDATE tb_clientes SET nome = :nome, email = :email, senha = :senha WHERE id = :id");
+        
+        $this->db->bind("id", $dados['id']);
+        $this->db->bind("nome", $dados['nome']);
+        $this->db->bind("email", $dados['email']);
+        $this->db->bind("senha", $dados['senha']);
+
+        if($this->db->executa()):
+            return true;
+        else:
+            return false;
+        endif;
+
+    }
+
     public function validarLogin($email, $senha) {
         $this->db->query("SELECT * FROM tb_clientes WHERE email = :email");
 

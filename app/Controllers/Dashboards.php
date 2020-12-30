@@ -1,67 +1,44 @@
 <?php
 
-class Paginas extends Controller {
+class Dashboards extends Controller {
 
     public function __construct() {
+        //$this->postModel = $this->model('Dashboard');
         $this->postModel = $this->model('Post');
         $this->produtoModel = $this->model('Produto');
         $this->usuarioModel = $this->model('Usuario');
     }
 
-    public function index() {
-        $dados = [
-            'titulo' => 'Pagina Inicial',
-            'descricao' => 'Criacao de site em modelo MVC',
-            'posts' => $this->postModel->listarPosts(),
-            'produtos' => $this->produtoModel->listarProdutos()
-        ];
-
-        $this->view('paginas/home', $dados);
-    }
-
-    public function sobre() {
-        $dados = [
-            'tituloPaginas' => 'Sobre Nos'
-        ];
-        
-        $this->view('paginas/sobre', $dados);
-    }
-
-    /*DASHBOARD*/
-
-    /*public function painelProduto($id) {
+    public function painelProduto() {
         $dados = [
             'produtos' => $this->produtoModel->listarProdutos(),
-            'usuario' => $this->usuarioModel->lerUsuarioPorId($id),
             'posts' => $this->postModel->listarPosts()
         ];
 
         $this->view('dashboard/painelProduto', $dados);
-    }*/
+    }
 
-    /*public function painelMensagem($id) {
+    public function painelMensagem() {
         $dados = [
             'produtos' => $this->produtoModel->listarProdutos(),
-            'usuario' => $this->usuarioModel->lerUsuarioPorId($id),
             'usuarios' => $this->usuarioModel->listarUsuarios(),
             'posts' => $this->postModel->listarPosts()
         ];
 
         $this->view('dashboard/painelMensagem', $dados);
-    }*/
+    }
 
-    /*public function painelCliente($id) {
+    public function painelCliente() {
         $dados = [
             'produtos' => $this->produtoModel->listarProdutos(),
-            'usuario' => $this->usuarioModel->lerUsuarioPorId($id),
             'usuarios' => $this->usuarioModel->listarUsuarios(),
             'posts' => $this->postModel->listarPosts()
         ];
 
         $this->view('dashboard/painelCliente', $dados);
-    }*/
+    }
 
-    /*public function adicionarProdutos() {
+    public function adicionarProdutos() {
         $formulario = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
         if(isset($formulario)):
             $dados = [
@@ -111,7 +88,7 @@ class Paginas extends Controller {
                 else:
                     if($this->produtoModel->armazenar($dados)):
                         Sessao::mensagem('produto', 'Produto adicionado com sucesso');
-                        Url::redirecionar('paginas/painelProduto/71');
+                        Url::redirecionar('paginas/painelProduto/'.$_SESSION['usuario_id']);
                     else:
                         die("Erro ao armazenar usuario no banco de dados");
 
@@ -139,6 +116,80 @@ class Paginas extends Controller {
         endif;
 
         $this->view('produtos/adicionarProdutos', $dados);
-    }*/
+    }
+
+    public function editarCliente($id) {
+        $formulario = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+        if(isset($formulario)):
+            $dados = [
+                'id' => $id,
+                'nome' => trim($formulario['nome']),
+                'email' => trim($formulario['email']),
+                'senha' => trim($formulario['senha'])
+            ];
+
+            if(in_array('', $formulario)):
+
+                if(empty($formulario['nome'])):
+                    $dados['preencha_nome'] = 'Preencha o campo <b>Nome</b>';
+                else:
+                    $dados['preencha_nome'] = ''; 
+                endif;
+
+                if(empty($formulario['email'])):
+                    $dados['preencha_email'] = 'Preencha o campo <b>E-mail</b>';
+                else:
+                    $dados['preencha_email'] = ''; 
+                endif;
+
+                if(empty($formulario['senha'])):
+                    $dados['preencha_senha'] = 'Preencha o campo <b>Senha</b><br>A senha deve ter no minimo 6 caracteres';
+                else:
+                    $dados['preencha_senha'] = ''; 
+                endif;
+
+            else:
+                if(Checa::checarNome($formulario['nome'])):
+                    $dados['preencha_nome'] = 'O nome informado e invalido';
+
+                elseif(Checa::checarEmail($formulario['email'])):
+                    $dados['preencha_email'] = 'O email informado e invalido';
+
+                elseif(strlen($formulario['senha']) < 6):
+                    $dados['preencha_senha'] = 'A senha deve ter no minimo 6 caracteres';
+
+                else:
+                    $dados['senha'] = password_hash($formulario['senha'], PASSWORD_DEFAULT);
+                    
+                    if($this->usuarioModel->atualizar($dados)):
+                        Sessao::mensagem('usuario', 'Dados alterados com sucesso');
+                        Url::redirecionar('dashboards/painelCliente');
+                    else:
+                        die("Erro ao armazenar usuario no banco de dados");
+
+                    endif;
+                
+                endif;
+                
+            endif;
+
+            /*var_dump($formulario);*/
+        else:
+            $alterar = $this->usuarioModel->lerUsuarioPorId($id);
+
+            $dados = [
+                'id' => $alterar->id,
+                'nome' => $alterar->nome,
+                'email' => $alterar->email,
+                'senha' => $alterar->senha,
+                'preencha_nome' => '',
+                'preencha_email' => '',
+                'preencha_senha' => ''
+            ];
+            
+        endif;
+
+        $this->view('dashboard/editarPerfil', $dados);
+    }
 
 }

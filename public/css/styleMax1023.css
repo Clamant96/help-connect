@@ -5300,7 +5300,7 @@ html, body {
 }
 
 #container section #exibirPerfil #perfil #gerenciarPerfil #dados #painel #opcao p {
-    width: 100%;
+    width: 70%;
     height: auto;
 
     font-size: 10px;
@@ -5309,6 +5309,105 @@ html, body {
     color: var(--text-white);
 
     text-transform: uppercase;
+
+}
+
+#container section #exibirPerfil #perfil #gerenciarPerfil #dados #painel #opcao #botoes {
+    width: 30%;
+    height: auto;
+
+    background-color: transparent;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    cursor: pointer;
+
+    border: none;
+
+}
+
+#container section #exibirPerfil #perfil #gerenciarPerfil #dados #painel #opcao #botoes #comprar {
+    margin: 1%;
+
+    width: 98%;
+    height: auto;
+
+    background-color: var(--text-light-gray4); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-gray4) , var(--text-light-gray));
+
+    border-radius: 5px;
+    border: none;
+
+}
+
+#container section #exibirPerfil #perfil #gerenciarPerfil #dados #painel #opcao #botoes #comprar a {
+    text-decoration: none;
+
+    width: 100%;
+    height: auto;
+
+    /*background-color: violet;*/
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+    
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #exibirPerfil #perfil #gerenciarPerfil #dados #painel #opcao #botoes #comprar a #icon {
+    padding: 3%;
+
+    width: 14%;
+    height: auto;
+
+    background-color: var(--text-light-blue-cart); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-blue-cart) , var(--text-blue-cart));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px 0px 0px 5px;
+
+}
+
+#container section #exibirPerfil #perfil #gerenciarPerfil #dados #painel #opcao #botoes #comprar a #icon svg {
+    width: 100%;
+    height: auto;
+
+    color: var(--text-white);
+
+}
+
+#container section #exibirPerfil #perfil #gerenciarPerfil #dados #painel #opcao #botoes #comprar a p {
+    padding: 3%;
+
+    width: 74%;
+    height: auto;
+    
+    background-color: var(--text-light-gray4); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-gray4) , var(--text-light-gray));
+
+    font-size: 12px;
+    font-weight: 700;
+
+    color: var(--text-black);
+
+    text-transform: uppercase;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0px 10px 10px 0px;
 
 }
 
@@ -5365,6 +5464,22 @@ html, body {
 }
 
 #container section #exibirPerfil #perfil #gerenciarPerfil #dados #painel #dadosPerfil #cadastro #nome input {
+    padding: 1%;
+
+    width: 96%;
+    height: auto;
+
+    font-size: 10px;
+    font-weight: 500;
+
+    color: var(--text-gray2);
+
+    border-radius: 3px;
+    border: 1px solid var(--text-light-gray2);
+
+}
+
+#container section #exibirPerfil #perfil #gerenciarPerfil #dados #painel #dadosPerfil #cadastro #nome textarea {
     padding: 1%;
 
     width: 96%;
@@ -5960,13 +6075,11 @@ html, body {
 
 /*BOTAO GERENCIAR PERFIL*/
 
-#container section #conteudo #botaoGerenciar {
+/*#container section #conteudo #botaoGerenciar {
     padding: 1%;
 
     width: 98%;
     height: auto;
-
-    /* background-color: turquoise; */
 
     display: flex;
     align-items: center;
@@ -5983,7 +6096,7 @@ html, body {
     width: 28%;
     height: auto;
 
-    background-color: var(--text-light-orange); /* For browsers that do not support gradients */
+    background-color: var(--text-light-orange);
     background-image: linear-gradient(var(--text-light-orange) , var(--text-orange));
 
     border-radius: 5px;
@@ -6014,7 +6127,7 @@ html, body {
     width: 14%;
     height: auto;
 
-    background-color: var(--text-light-blue-cart); /* For browsers that do not support gradients */
+    background-color: var(--text-light-blue-cart);
     background-image: linear-gradient(var(--text-light-blue-cart) , var(--text-blue-cart));
 
     display: flex;
@@ -6052,5 +6165,131 @@ html, body {
     justify-content: center;
 
     border-radius: 0px 10px 10px 0px;
+
+}*/
+
+/*PAINEL MENSAGEM*/
+
+#container section #exibirPerfil #perfil #gerenciarPerfil #dados #painel #dadosPerfil #cadastro #mensagem {
+    padding: 0%;
+    margin: 0.5%;
+
+    width: 99%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+#container section #exibirPerfil #perfil #gerenciarPerfil #dados #painel #dadosPerfil #cadastro #mensagem #linkTitulo {
+    width: 75%;
+    height: auto;
+
+    text-decoration: none;
+
+}
+
+#container section #exibirPerfil #perfil #gerenciarPerfil #dados #painel #dadosPerfil #cadastro #mensagem #linkTitulo #titulo {
+    width: 100%;
+    height: auto;
+
+    color: var(--text-black);
+
+    font-size: 10px;
+    font-weight: 500;
+
+}
+
+#container section #exibirPerfil #perfil #gerenciarPerfil #dados #painel #dadosPerfil #cadastro #mensagem #botoes {
+    padding: 1%;
+
+    width: 23%;
+    height: auto;
+
+    border-radius: 5px;
+
+}
+
+#container section #exibirPerfil #perfil #gerenciarPerfil #dados #painel #dadosPerfil #cadastro #mensagem #botoes #comprar {
+    margin: 1%;
+
+    width: 98%;
+    height: auto;
+
+    background-color: var(--text-light-orange); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-orange) , var(--text-orange));
+
+    border-radius: 5px;
+
+}
+
+#container section #exibirPerfil #perfil #gerenciarPerfil #dados #painel #dadosPerfil #cadastro #mensagem #botoes #comprar a {
+    text-decoration: none;
+
+    width: 100%;
+    height: auto;
+
+    /* background-color: violet; */
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadown);
+    
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #exibirPerfil #perfil #gerenciarPerfil #dados #painel #dadosPerfil #cadastro #mensagem #botoes #comprar a #icon {
+    padding: 3%;
+
+    width: 14%;
+    height: auto;
+
+    background-color: var(--text-light-blue-cart); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-blue-cart) , var(--text-blue-cart));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px 0px 0px 5px;
+
+}
+
+#container section #exibirPerfil #perfil #gerenciarPerfil #dados #painel #dadosPerfil #cadastro #mensagem #botoes #comprar a #icon svg {
+    width: 100%;
+    height: auto;
+
+    color: var(--text-white);
+
+}
+
+#container section #exibirPerfil #perfil #gerenciarPerfil #dados #painel #dadosPerfil #cadastro #mensagem #botoes #comprar a p {
+    padding: 3%;
+
+    width: 74%;
+    height: auto;
+    
+    background-color: var(--text-light-orange); /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--text-light-orange) , var(--text-orange));
+
+    font-size: 10px;
+    font-weight: 700;
+
+    color: var(--text-white);
+
+    text-transform: uppercase;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0px 5px 5px 0px;
 
 }

@@ -28,9 +28,9 @@ include './../app/autoload.php';
             <a href="<?=URL?>/paginas/sobre"><li>Sobre</li></a>
             <a href="#"><li>Layouts</li></a>
             <a href="#"><li>Contatos</li></a>
-            <a href="<?=URL?>/posts/listar"><li>Mensagem</li></a>
-            <a href="<?=URL?>/produtos/listar"><li>Listar Produtos</li></a>
-            <a href="<?=URL?>/produtos/cadastrar"><li>Cadastrar Produtos</li></a>
+            <!-- <a href="<?=URL?>/posts/listar"><li>Mensagem</li></a> -->
+            <!-- <a href="<?=URL?>/produtos/listar"><li>Listar Produtos</li></a> -->
+            <!-- <a href="<?=URL?>/produtos/cadastrar"><li>Cadastrar Produtos</li></a> -->
             <!-- <a href="<?= URL.'/paginas/painelProduto/'.$_SESSION['usuario_id'] ?>"><li>Dashboard</li></a> -->
             <!-- <a href="<?= URL.'/usuarios/vizualizarPerfil/'.$_SESSION['usuario_id'] ?>"><li>Gerenciar Conta</li></a> -->
             <!-- <a href="<?= URL.'/usuarios/vizualizarPerfil/71' ?>"><li>Gerenciar Conta</li></a> -->

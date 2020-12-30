@@ -1,27 +1,3 @@
-<!-- <section>
-    <div id="pergunta">
-        <form action="<?=URL?>/posts/editar/<?= $dados['id'] ?>" method="POST">
-            <div id="texto">
-                <p>Fale conosco</p>
-                <textarea type="text" name="texto" cols="30" rows="10" placeholder="Digite aqui..." value="<?=$dados['texto']?>" id="<?= $dados['preencha_texto'] ? 'invalido' : '' ?>" ><?=$dados['texto']?></textarea>
-                <div id="textoFeedback" class="<?= $dados['preencha_texto'] ? 'feedback' : 'none' ?>">
-                    <?= $dados['preencha_texto'] ?>
-                </div>
-            </div>
-            <div id="titulo">
-                <p>Titulo</p>
-                <div id="enviar">
-                    <input type="text" name="titulo" placeholder="Titulo" value="<?=$dados['titulo']?>" id="<?= $dados['preencha_titulo'] ? 'invalido' : '' ?>" />
-                    <button type="submit">Atualizar</button>
-                </div>
-                <div id="textoFeedback" class="<?= $dados['preencha_titulo'] ? 'feedback' : 'none' ?>">
-                    <?= $dados['preencha_titulo'] ?>
-                </div>
-            </div>
-        </form>
-    </div>
-</section> -->
-
 <section>
     <div id="exibirPerfil">
         <div id="perfil">
@@ -76,12 +52,12 @@
                         <h1>Dados Cadastrais</h1>
                         <h2>Todos os campos sao obrigatorios</h2>
                     </div>
-                    <form id="painel" action="<?= URL .'/posts/editar/'. $dados['id'] ?>" method="POST">
+                    <form id="painel" action="<?= URL.'/usuarios/editar/'. $dados['id'] ?>" method="POST">
                         <div id="opcao">
                             <p>Dados Pessoais</p>
                             <button type="submit" id="botoes">
                                 <div id="comprar">
-                                    <a href="#">
+                                    <a>
                                         <div id="icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen-fill" viewBox="0 0 16 16">
                                                 <path d="M13.498.795l.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z"/>
@@ -95,23 +71,51 @@
                         <div id="dadosPerfil">
                             <div id="cadastro">
                                 <div id="nome">
-                                    <p>Fale conosco</p>
-                                    <textarea type="text" name="texto" cols="30" rows="10" placeholder="Digite aqui..." value="<?=$dados['texto']?>" id="<?= $dados['preencha_texto'] ? 'invalido' : '' ?>" ><?=$dados['texto']?></textarea>
-                                    <div id="textoFeedback" class="<?= $dados['preencha_texto'] ? 'feedback' : 'none' ?>">
-                                        <?= $dados['preencha_texto'] ?>
-                                    </div>
+                                    <p>Nome</p>
+                                    <input type="text" name="nome" placeholder="Nome" value="<?=$dados['nome']?>" id="<?= $dados['preencha_nome'] ? 'invalido' : '' ?>" />
+                                    <div id="textoFeedback" class="<?= $dados['preencha_nome'] ? 'feedback' : 'none' ?>">
+                                    <?= $dados['preencha_nome'] ?>
+                                </div>
                                 </div>
                                 <div id="nome">
-                                    <p>Titulo</p>
-                                    <input type="text" name="titulo" placeholder="Titulo" value="<?=$dados['titulo']?>" id="<?= $dados['preencha_titulo'] ? 'invalido' : '' ?>" />
-                                    <div id="textoFeedback" class="<?= $dados['preencha_titulo'] ? 'feedback' : 'none' ?>">
-                                        <?= $dados['preencha_titulo'] ?>
+                                    <p>E-mail</p>
+                                    <input type="text" name="email" placeholder="E-mail" value="<?=$dados['email']?>" id="<?= $dados['preencha_email'] ? 'invalido' : '' ?>" />
+                                    <div id="textoFeedback" class="<?= $dados['preencha_email'] ? 'feedback' : 'none' ?>">
+                                        <?= $dados['preencha_email'] ?>
+                                    </div>
+                                </div>
+                                <!-- <div id="cpfRg">
+                                    <div id="cpf">
+                                        <p>CPF</p>
+                                        <input type="text" name="email" placeholder="CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" />
+                                    </div>
+                                    <div id="rg">
+                                        <p>RG</p>
+                                        <input type="text" name="email" placeholder="RG" />
+                                    </div>
+                                </div>
+                                <div id="celIdade">
+                                    <div id="cel">
+                                        <p>CEL</p>
+                                        <input type="tel" name="email" placeholder="Cel" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" />
+                                    </div>
+                                    <div id="idade">
+                                        <p>Data Nascimento</p>
+                                        <input type="date" name="email" placeholder="Data Nascimento" />
+                                    </div>
+                                </div> -->
+                                <div id="nome">
+                                    <p>Senha</p>
+                                    <input type="password" name="senha" placeholder="Senha" value="" id="<?= $dados['preencha_senha'] ? 'invalido' : '' ?>" />
+                                    <div id="textoFeedback" class="<?= $dados['preencha_senha'] ? 'feedback' : 'none' ?>">
+                                        <?= $dados['preencha_senha'] ?>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </form>
                 </div>
+                <!-- <?php include '../app/Views/usuarios/dadosPessoais.php'; ?> -->
             </div>
         </div>
     </div>

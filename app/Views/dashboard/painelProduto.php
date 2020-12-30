@@ -13,10 +13,10 @@
                             </svg>
                         </div>
                         <div id="nome">
-                            <p><?= $dados['usuario']->nome ?></p>
+                            <p><?= $_SESSION['usuario_nome'] ?></p>
                         </div>
                         <div id="email">
-                            <p><?= $dados['usuario']->email ?></p>
+                            <p><?= $_SESSION['usuario_email'] ?></p>
                         </div>
                     </div>
                     <div id="botoes">
@@ -33,7 +33,7 @@
                                 <p>Perfil</p>
                             </a>
                         </div>
-                        <div id="comprar">
+                        <!-- <div id="comprar">
                             <a href="<?=URL.'/paginas/painelProduto/'.$_SESSION['usuario_id'] ?>">
                                 <div id="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
@@ -45,9 +45,9 @@
                                 </div>
                                 <p>Gerenciar Produtos</p>
                             </a>
-                        </div>
+                        </div> -->
                         <div id="comprar">
-                            <a href="<?=URL.'/produtos/cadastrar/'.$_SESSION['usuario_id'] ?>">
+                            <a href="<?= URL.'/produtos/cadastrar/'.$_SESSION['usuario_id'] ?>">
                                 <div id="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
                                         <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
@@ -61,7 +61,7 @@
                             </a>
                         </div>
                         <div id="comprar">
-                            <a href="<?=URL.'/paginas/painelCliente/'.$_SESSION['usuario_id'] ?>">
+                            <a href="<?= URL ?>/dashboards/painelCliente">
                                 <div id="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                                         <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
@@ -76,7 +76,7 @@
                             </a>
                         </div>
                         <div id="comprar">
-                            <a href="<?=URL.'/paginas/painelMensagem/'.$_SESSION['usuario_id'] ?>">
+                            <a href="<?= URL ?>/dashboards/painelMensagem">
                                 <div id="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
                                         <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>

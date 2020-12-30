@@ -1,4 +1,4 @@
-<!-- <section>
+<section>
     <div id="exibirPerfil">
         <div id="perfil">
             <div id="informacao">
@@ -6,6 +6,7 @@
             </div>
             <div id="gerenciarPerfil">
                 <div id="menu">
+                    <!-- DADOS PERFIL CAMPO MENU -->
                     <div id="dadosLogin">
                         <div id="img">
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -15,10 +16,10 @@
                             </svg>
                         </div>
                         <div id="nome">
-                            <p><?= $dados['usuario']->nome ?></p>
+                            <p><?= $_SESSION['usuario_nome'] ?></p>
                         </div>
                         <div id="email">
-                            <p><?= $dados['usuario']->email ?></p>
+                            <p><?= $_SESSION['usuario_email'] ?></p>
                         </div>
                     </div>
                     <div id="botoes">
@@ -97,7 +98,8 @@
                         </div>
                     </div>
                 </div>
+                <!-- <?php include '../app/Views/usuarios/dadosPessoais.php'; ?> -->
             </div>
         </div>
     </div>
-</section> -->
+</section>
