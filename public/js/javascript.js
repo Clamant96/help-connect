@@ -43,7 +43,7 @@ for (i = 0; i < coll.length; i++) {
 }
 
 /*MODAL - CADASTRO / LOGIN*/
-var modal = document.getElementById("modal-login-cadastro");
+/*var modal = document.getElementById("modal-login-cadastro");
 var person = document.getElementById("person");
 var span = document.getElementsByClassName("close")[0];
 
@@ -59,4 +59,4 @@ window.onclick = function(event) {
     if (event.target == modal) {
       modal.style.display = "none";
     }
-}
+}*/

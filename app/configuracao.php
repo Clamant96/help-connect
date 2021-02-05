@@ -9,7 +9,7 @@
 //define o const - Define uma constante. As constantes nao podem ser alteradas depois de declaradas.
 define('APP', dirname(__FILE__));
 
-define('URL', 'http://localhost/framework');
+define('URL', 'http://localhost/help-connect');
 
 define('APP_NOME', 'Help Connect');
 

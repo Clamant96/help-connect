@@ -67,6 +67,9 @@
             <div id="icon">
                 <img src="<?=URL?>/public/img/facebook.png">
             </div>
+            <div id="icon">
+                <img src="<?=URL?>/public/img/github.png">
+            </div>
         </div>
     </div>
     <div id="copyright">

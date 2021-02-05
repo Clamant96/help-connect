@@ -381,17 +381,30 @@ html, body {
     width: 20%;
     height: auto;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 #container footer #footer #iconsFooter #icon img {
     padding: 20%;
 
-    width: 60%;
+    width: 80%;
     height: auto;
 
     background-color: var(--text-purple);
 
     border-radius: 10px;
+
+    transition: background-color, .5s;
+
+    cursor: pointer;
+
+}
+
+#container footer #footer #iconsFooter #icon img:hover {
+    background-color: var(--text-gray);
 
 }
 
@@ -7370,5 +7383,412 @@ html, body {
 
 #container section #dashboard #perfil #gerenciarPerfil #tabelaClientes table  tr:nth-child(even) {
     background-color: #dddddd;
+
+}
+
+/*CONSTRUCAO - HOME*/
+
+#container section #homeApresentacao {
+    width: 100%;
+    height: auto;
+
+    background-image: url(../img/planejamento.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+
+}
+
+#container section #homeApresentacao #filtro {
+    width: 100%;
+    height: 100%;
+    
+    background-color: #282c4ea0;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#container section #homeApresentacao #filtro #acesso {
+    padding: 2%;
+
+    width: 76%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+}
+
+#container section #homeApresentacao #filtro #acesso #recepcao {
+    width: 30%;
+    height: auto;
+
+    color: var(--background-body);
+
+}
+
+#container section #homeApresentacao #filtro #acesso #recepcao b a {
+    text-decoration: none;
+
+    color: var(--background-body);
+
+}
+
+#container section #homeApresentacao #filtro #acesso #recepcao i {
+    font-style: normal;
+    font-size: 0.8rem;
+
+    color: var(--text-gray3);
+
+}
+
+#container section #homeApresentacao #filtro #conteudo {
+    width: 80%;
+    height: 80vh;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;    
+
+}
+
+#container section #homeApresentacao #filtro #conteudo h1 {
+    margin-top: -5%;
+    width: 100%;
+    height: auto;
+
+    font-size: 4rem;
+    line-height: 2;
+
+    color: var(--background-body);
+
+}
+
+#container section #homeApresentacao #filtro #conteudo p {
+    margin-right: 30%;
+
+    width: 70%;
+    height: auto;
+
+    font-size: 1rem;
+    font-weight: 400;
+
+    color: var(--background-body);
+
+}
+
+#container section #homeApresentacao #filtro #conteudo #botao {
+    width: 100%;
+    height: auto;
+
+}
+
+#container section #homeApresentacao #filtro #conteudo #botao button {
+    margin-top: 2%;
+    padding: 1.2% 3% 1.2% 3%;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    color: var(--background-body);
+
+    background-color: var(--text-blue-cart);
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+}
+
+#container section #homeServicos {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+    background-color: var(--background-body);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#container section #homeServicos #servicos {
+    padding: 5%;
+
+    width: 60%;
+    height: auto;
+
+}
+
+#container section #homeServicos #servicos h2 {
+    font-size: 2.5rem;
+
+    text-align: center;
+
+    color: var(--text-black);
+
+}
+
+#container section #homeServicos #servicos p {
+    margin-top: 1%;
+
+    font-size: 100%;
+
+    text-align: center;
+
+    color: var(--text-gray3);
+
+    line-height: 1.5;
+
+}
+
+#container section #homeServicos #itens {
+    width: 70%;
+    height: auto;
+
+    flex-wrap: wrap;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#container section #homeServicos #itens #bloco {
+    margin: 2%;
+    padding: 2%;
+    
+    min-width: 42%;
+    max-width: 42%;
+    height: auto;
+
+    background-color: var(--background-header);
+
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #homeServicos #itens #bloco img {
+    padding: 2%;
+
+    width: 26%;
+    height: auto;
+
+}
+
+#container section #homeServicos #itens #bloco #descricao {
+    padding: 2%;
+
+    width: 76%;
+    height: auto;
+
+}
+
+#container section #homeServicos #itens #bloco #descricao h2 {
+    padding: 2%;
+    margin: 1%;
+
+    width: 94%;
+    height: auto;
+
+    font-size: 1.5rem;
+
+    color: var(--text-black);
+
+    text-align: center;
+
+}
+
+#container section #homeServicos #itens #bloco #descricao p {
+    padding: 2%;
+    margin: 1%;
+
+    width: 94%;
+    height: auto;
+
+    font-size: 100%;
+
+    color: var(--text-gray3);
+
+    text-align: center;
+
+}
+
+#container section #homeLayouts {
+    padding: 2%;
+
+    width: 76%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#container section #homeLayouts #homeProdutos {
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #homeLayouts #homeProdutos img {
+    width: 40%;
+    height: auto;
+
+}
+
+#container section #homeLayouts #homeProdutos #descricao {
+    padding: 5%;
+
+    width: 50%;
+    height: auto;
+
+}
+
+#container section #homeLayouts #homeProdutos #descricao h2 {
+    padding: 2%;
+
+    font-size: 2rem;
+
+    color: var(--text-black);
+
+}
+
+#container section #homeLayouts #homeProdutos #descricao p {
+    padding: 2%;
+    
+    font-size: 100%;
+
+    color: var(--text-gray3);
+
+}
+
+#container section #homeLayouts #homeProdutos #descricao #botao {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+}
+
+#container section #homeLayouts #homeProdutos #descricao #botao button {
+    padding: 2% 3.5% 2% 3.5%;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    color: var(--background-body);
+
+    background-color: var(--text-blue-cart);
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+}
+
+#container section #homeLayouts #hrHome {
+    padding: 1%;
+
+    width: 78%;
+    height: auto;
+    
+
+}
+
+#container section #homeLayouts #hrHome hr {
+    border-top: 2px solid var(--text-light-gray2);
+    border-left: 0px solid var(--text-light-gray2);
+    border-right: 0px solid var(--text-light-gray2);
+    border-bottom: 0px solid var(--text-light-gray2);
+}
+
+#container section #homeLayouts #homeContato {
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container section #homeLayouts #homeContato img {
+    width: 40%;
+    height: auto;
+
+}
+
+#container section #homeLayouts #homeContato #descricao {
+    padding: 5%;
+
+    width: 50%;
+    height: auto;
+
+}
+
+#container section #homeLayouts #homeContato #descricao h2 {
+    padding: 2%;
+
+    font-size: 2rem;
+
+    color: var(--text-black);
+
+}
+
+#container section #homeLayouts #homeContato #descricao p {
+    padding: 2%;
+    
+    font-size: 100%;
+
+    color: var(--text-gray3);
+
+}
+
+#container section #homeLayouts #homeContato #descricao #botao {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+}
+
+#container section #homeLayouts #homeContato #descricao #botao button {
+    padding: 2% 3.5% 2% 3.5%;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    color: var(--background-body);
+
+    background-color: var(--text-blue-cart);
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
 
 }

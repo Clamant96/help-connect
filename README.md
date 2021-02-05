@@ -22,25 +22,25 @@ Desenvolvendo sistema para conclusão de semestre, matéria Desenvolvimento De S
 
  - [x] Desenvolvimento de documento Escrito
 
- - [] Desenvolvimento da Apresentacao Gravada 
+ - [x] Desenvolvimento da Apresentacao Gravada 
 
 ## DATAS DE ENTREGAS
 
- - [] 29/09 - Primeira Entrega
-    - [] Nomes dos Integrantes
-    - [] Entrega do Ideia do Projeto
+ - [x] 29/09 - Primeira Entrega
+    - [x] Nomes dos Integrantes
+    - [x] Entrega do Ideia do Projeto
 
- - [] 21/10 - Segunda Entrega
-    - [] Entrega da Primeira versao do documento escrito
-        - [] Nomes dos Integrantes
-        - [] Entrega do Ideia do Projeto
-        - [] Detalhar as funcionalidades da Aplicacao
-            - [] Caso de Uso
-            - [] Diagrama de Classe
-            - [] Banco de Dados
-        - [] Reallizar um Apresentacao sobre o Projeto em 5 minutos
+ - [x] 21/10 - Segunda Entrega
+    - [x] Entrega da Primeira versao do documento escrito
+        - [x] Nomes dos Integrantes
+        - [x] Entrega do Ideia do Projeto
+        - [x] Detalhar as funcionalidades da Aplicacao
+            - [x] Caso de Uso
+            - [x] Diagrama de Classe
+            - [x] Banco de Dados
+        - [x] Reallizar um Apresentacao sobre o Projeto em 5 minutos
 
- - [] 18/11 | 25/11 | 02/12 - Entrega Final
-    - [] Entrega da Documentacao Final do Projeto
-    - [] Realizacao de Apresentacao em 10 minutos, falando sobre o desenvolvimento do projeto
+ - [x] 18/11 | 25/11 | 02/12 - Entrega Final
+    - [x] Entrega da Documentacao Final do Projeto
+    - [x] Realizacao de Apresentacao em 10 minutos, falando sobre o desenvolvimento do projeto
 

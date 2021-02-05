@@ -19,6 +19,17 @@ class Paginas extends Controller {
         $this->view('paginas/home', $dados);
     }
 
+    public function layouts() {
+        $dados = [
+            'titulo' => 'Pagina Inicial',
+            'descricao' => 'Criacao de site em modelo MVC',
+            'posts' => $this->postModel->listarPosts(),
+            'produtos' => $this->produtoModel->listarProdutos()
+        ];
+
+        $this->view('paginas/layouts', $dados);
+    }
+
     public function sobre() {
         $dados = [
             'tituloPaginas' => 'Sobre Nos'
