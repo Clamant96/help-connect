@@ -13,10 +13,10 @@ Desenvolvendo sistema para conclusão de semestre, matéria Desenvolvimento De S
     - [x] Analise de Mercado
     - [x] Viabilidade
 
- - [] Definir as funcionalidades da Aplicacao 
-    - [] Caso de Uso
-    - [] Diagrama de Classe
-    - [] Banco de Dados
+ - [x] Definir as funcionalidades da Aplicacao 
+    - [x] Caso de Uso
+    - [x] Diagrama de Classe
+    - [x] Banco de Dados
 
  - [X] Criar Interface Prototipo
 
