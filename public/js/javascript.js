@@ -5,11 +5,11 @@ window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 }
 
-/*document.getElementById("img").onclick = function() {ativarMenu()};
+document.getElementById("img").onclick = function() {ativarMenu()};
 
 function ativarMenu() {
-  document.getElementById("sideBar").style.marginLeft = "0%";
-
+  //document.getElementById("sideBar").style.marginLeft = "0%";
+  document.getElementById("sideBar").style.width = "250px";
 }
 
 // RESPONSIVIDADE
@@ -21,11 +21,12 @@ function metodoResponsivo() {
   document.getElementById("sideBar").onclick = function() {desativarMenu()}
   
   function desativarMenu() {
-    document.getElementById("sideBar").style.marginLeft = "-22%";
+    //document.getElementById("sideBar").style.marginLeft = "-22%";
+    document.getElementById("sideBar").style.width = "0";
   
   }
 
-}*/
+}
 
 var coll = document.getElementsByClassName("collapsible");
 var i;
@@ -62,7 +63,7 @@ window.onclick = function(event) {
 }*/
 
 // RESPONSIVIDADE
-var width = window.innerWidth;
+/*var width = window.innerWidth;
 
 if(width >= 1024) {
   document.getElementById("img").onclick = function() {
@@ -116,4 +117,4 @@ if(width >= 1024) {
     document.getElementById("sideBar").style.marginLeft = "-22%";
   };
   
-}
+}*/

@@ -71,16 +71,16 @@ html, body {
 #sideBar {
     position: fixed;
 
-    margin-left: -22%;
-    
-    width: 20%;
+    overflow-x: hidden;
+
+    width: 0;
     height: 100%;
 
     background-color: var(--background-header);
 
     box-shadow: 0px 0px 5px -2px var(--box-shadown);
     
-    transition: margin-left, .5s;
+    transition: width, .2s;
 
     z-index: 1;
 
