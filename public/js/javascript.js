@@ -5,7 +5,7 @@ window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 }
 
-document.getElementById("img").onclick = function() {ativarMenu()};
+/*document.getElementById("img").onclick = function() {ativarMenu()};
 
 function ativarMenu() {
   document.getElementById("sideBar").style.marginLeft = "0%";
@@ -25,7 +25,7 @@ function metodoResponsivo() {
   
   }
 
-}
+}*/
 
 var coll = document.getElementsByClassName("collapsible");
 var i;
@@ -60,3 +60,60 @@ window.onclick = function(event) {
       modal.style.display = "none";
     }
 }*/
+
+// RESPONSIVIDADE
+var width = window.innerWidth;
+
+if(width >= 1024) {
+  document.getElementById("img").onclick = function() {
+    document.getElementById("sideBar").style.marginLeft = "0%";
+  };
+
+  document.getElementById("sideBar").onclick = function() {
+    document.getElementById("sideBar").style.marginLeft = "-22%";
+  };
+
+}else if(width >= 768 && width <= 1023) {
+  document.getElementById("img").onclick = function() {
+    document.getElementById("sideBar").style.marginLeft = "0%";
+  };
+
+  document.getElementById("sideBar").onclick = function() {
+    document.getElementById("sideBar").style.marginLeft = "-22%";
+  };
+
+}else if(width >= 361 && width <= 767) {
+  document.getElementById("sideBar").style.marginTop = "-500%";
+
+  document.getElementById("img").onclick = function() {
+    document.getElementById("sideBar").style.borderTop = "3rem solid var(--text-blue-cart)";
+    document.getElementById("sideBar").style.marginLeft = "0%";
+    document.getElementById("sideBar").style.marginTop = "0%";
+    document.getElementById("sideBar").style.width = "100%";
+    document.getElementById("sideBar").style.display = "block";
+
+    document.querySelector("ul").style.listStyle = "none";
+  };
+
+  document.getElementById("sideBar").onclick = function() {
+    document.getElementById("sideBar").style.marginLeft = "-22%";
+  };
+  
+}else if(width <= 360) {
+  document.getElementById("sideBar").style.marginTop = "-5  00%";
+
+  document.getElementById("img").onclick = function() {
+    document.getElementById("sideBar").style.borderTop = "3rem solid var(--text-blue-cart)";
+    document.getElementById("sideBar").style.marginLeft = "0%";
+    document.getElementById("sideBar").style.marginTop = "0%";
+    document.getElementById("sideBar").style.width = "100%";
+    document.getElementById("sideBar").style.display = "block";
+
+    document.querySelector("ul").style.listStyle = "none";
+  };
+
+  document.getElementById("sideBar").onclick = function() {
+    document.getElementById("sideBar").style.marginLeft = "-22%";
+  };
+  
+}
